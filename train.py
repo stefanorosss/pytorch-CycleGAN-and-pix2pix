@@ -30,6 +30,8 @@ if __name__ == '__main__':
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
     dataset_size = len(dataset)    # get the number of images in the dataset.
     s3 = S3Con()
+    jobname = int(time.time())
+    print(f'Job Id = {jobname}')
     print('The number of training images = %d' % dataset_size)
 
     model = create_model(opt)      # create a model given opt.model and other options
@@ -71,13 +73,13 @@ if __name__ == '__main__':
                 model.save_networks(save_suffix)
 
             iter_data_time = time.time()
-        if epoch >= opt.n_epochs:
+        if epoch > opt.n_epochs + int(opt.n_epochs_decay/2):
             if epoch % opt.save_epoch_freq == 0:              # cache our model every <save_epoch_freq> epochs
                 print('saving the model at the end of epoch %d, iters %d' % (epoch, total_iters))
                 model.save_networks('latest')
                 namelist = model.save_networks(epoch)
                 for _path in namelist:
-                    s3.upload_file_to_s3(_path,'sagemaker-eu-central-1-213183576773','olracle/'+_path)
+                    s3.upload_file_to_s3(_path,'sagemaker-eu-central-1-213183576773',f'olracle/{jobname}/'+_path)
 
         print('End of epoch %d / %d \t Time Taken: %d sec' % (epoch, opt.n_epochs + opt.n_epochs_decay, time.time() - epoch_start_time))
         
@@ -85,4 +87,4 @@ if __name__ == '__main__':
         if epoch == total_epochs:
             _pth = 'checkpoints/olracle-pix2pix/web/images/'
             for _element in os.listdir(_pth):
-                s3.upload_file_to_s3(_pth+_element,'sagemaker-eu-central-1-213183576773','olracle/images/'+_element)
+                s3.upload_file_to_s3(_pth+_element,'sagemaker-eu-central-1-213183576773',f'olracle/{jobname}/images/'+_element)

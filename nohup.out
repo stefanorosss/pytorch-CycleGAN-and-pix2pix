@@ -1,0 +1,1733 @@
+'create_image_uri' will be deprecated in favor of 'ImageURIProvider' class in SageMaker Python SDK v2.
+'create_image_uri' will be deprecated in favor of 'ImageURIProvider' class in SageMaker Python SDK v2.
+2020-11-19 07:57:21 Starting - Starting the training job...
+2020-11-19 07:57:23 Starting - Launching requested ML instances......
+2020-11-19 07:58:27 Starting - Preparing the instances for training......
+2020-11-19 07:59:48 Downloading - Downloading input data......
+2020-11-19 08:00:26 Training - Downloading the training image.........
+2020-11-19 08:02:12 Training - Training image download completed. Training in progress.bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+2020-11-19 08:02:13,663 sagemaker-containers INFO     Imported framework sagemaker_pytorch_container.training
+2020-11-19 08:02:13,688 sagemaker_pytorch_container.training INFO     Block until all host DNS lookups succeed.
+2020-11-19 08:02:13,694 sagemaker_pytorch_container.training INFO     Invoking user training script.
+2020-11-19 08:02:15,713 sagemaker-containers INFO     Module default_user_module_name does not provide a setup.py. 
+Generating setup.py
+2020-11-19 08:02:15,713 sagemaker-containers INFO     Generating setup.cfg
+2020-11-19 08:02:15,714 sagemaker-containers INFO     Generating MANIFEST.in
+2020-11-19 08:02:15,714 sagemaker-containers INFO     Installing module with the following command:
+/opt/conda/bin/python -m pip install . -r requirements.txt
+Processing /tmp/tmpc_q4c8jk/module_dir
+Requirement already satisfied: torch>=0.4.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 1)) (1.5.0)
+Requirement already satisfied: torchvision>=0.2.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 2)) (0.6.0)
+Collecting dominate>=2.3.1
+  Downloading dominate-2.6.0-py2.py3-none-any.whl (29 kB)
+Collecting visdom>=0.1.8.3
+  Downloading visdom-0.1.8.9.tar.gz (676 kB)
+Requirement already satisfied: future in /opt/conda/lib/python3.6/site-packages (from torch>=0.4.1->-r requirements.txt (line 1)) (0.17.1)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.6/site-packages (from torch>=0.4.1->-r requirements.txt (line 1)) (1.16.4)
+Requirement already satisfied: pillow>=4.1.1 in /opt/conda/lib/python3.6/site-packages (from torchvision>=0.2.1->-r requirements.txt (line 2)) (7.1.0)
+Requirement already satisfied: scipy in /opt/conda/lib/python3.6/site-packages (from visdom>=0.1.8.3->-r requirements.txt (line 4)) (1.2.2)
+Requirement already satisfied: requests in /opt/conda/lib/python3.6/site-packages (from visdom>=0.1.8.3->-r requirements.txt (line 4)) (2.22.0)
+Collecting tornado
+  Downloading tornado-6.1-cp36-cp36m-manylinux2010_x86_64.whl (427 kB)
+Collecting pyzmq
+  Downloading pyzmq-20.0.0-cp36-cp36m-manylinux1_x86_64.whl (1.1 MB)
+Requirement already satisfied: six in /opt/conda/lib/python3.6/site-packages (from visdom>=0.1.8.3->-r requirements.txt (line 4)) (1.14.0)
+Collecting jsonpatch
+  Downloading jsonpatch-1.26-py2.py3-none-any.whl (11 kB)
+Collecting torchfile
+  Downloading torchfile-0.1.0.tar.gz (5.2 kB)
+Collecting websocket-client
+  Downloading websocket_client-0.57.0-py2.py3-none-any.whl (200 kB)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.6/site-packages (from requests->visdom>=0.1.8.3->-r requirements.txt (line 4)) (1.25.8)
+Requirement already satisfied: idna<2.9,>=2.5 in /opt/conda/lib/python3.6/site-packages (from requests->visdom>=0.1.8.3->-r requirements.txt (line 4)) (2.8)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /opt/conda/lib/python3.6/site-packages (from requests->visdom>=0.1.8.3->-r requirements.txt (line 4)) (3.0.4)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.6/site-packages (from requests->visdom>=0.1.8.3->-r requirements.txt (line 4)) (2020.4.5.1)
+Collecting jsonpointer>=1.9
+  Downloading jsonpointer-2.0-py2.py3-none-any.whl (7.6 kB)
+Building wheels for collected packages: visdom, default-user-module-name, torchfile
+  Building wheel for visdom (setup.py): started
+  Building wheel for visdom (setup.py): finished with status 'done'
+  Created wheel for visdom: filename=visdom-0.1.8.9-py3-none-any.whl size=655249 sha256=94034f87ab9111754efd82fd83f930c3362215e22a6a7f6d2bb3b07d1a9c075e
+  Stored in directory: /root/.cache/pip/wheels/2d/cd/fb/005445070865d4e45365b2946ee88085a7392370f152cf371c
+  Building wheel for default-user-module-name (setup.py): started
+  Building wheel for default-user-module-name (setup.py): finished with status 'done'
+  Created wheel for default-user-module-name: filename=default_user_module_name-1.0.0-py2.py3-none-any.whl size=77117761 sha256=d2dcb1e88275046b9ca77b07ed6188f4e20cfa3059f37f590ac08337b8c7a363
+  Stored in directory: /tmp/pip-ephem-wheel-cache-xzjgxjc3/wheels/a3/e5/b2/1d175cb52be49e92b515d5ff7033ff244fd1cbc720c236b979
+  Building wheel for torchfile (setup.py): started
+  Building wheel for torchfile (setup.py): finished with status 'done'
+  Created wheel for torchfile: filename=torchfile-0.1.0-py3-none-any.whl size=5711 sha256=521a9def5eeacaa43e2ae7065401cb44e81c0b2814fd8177308e39526e7eb6ec
+  Stored in directory: /root/.cache/pip/wheels/55/79/ec/084a3a2e348d72852cc0c13c559c923c13ca54db86e699b681
+Successfully built visdom default-user-module-name torchfile
+Installing collected packages: dominate, tornado, pyzmq, jsonpointer, jsonpatch, torchfile, websocket-client, visdom, default-user-module-name
+Successfully installed default-user-module-name-1.0.0 dominate-2.6.0 jsonpatch-1.26 jsonpointer-2.0 pyzmq-20.0.0 torchfile-0.1.0 tornado-6.1 visdom-0.1.8.9 websocket-client-0.57.0
+WARNING: You are using pip version 20.1; however, version 20.2.4 is available.
+You should consider upgrading via the '/opt/conda/bin/python -m pip install --upgrade pip' command.
+2020-11-19 08:02:33,311 sagemaker-containers INFO     Invoking user script
+
+Training Env:
+
+{
+    "additional_framework_parameters": {},
+    "channel_input_dirs": {},
+    "current_host": "algo-1",
+    "framework_module": "sagemaker_pytorch_container.training:main",
+    "hosts": [
+        "algo-1"
+    ],
+    "hyperparameters": {
+        "checkpoints_dir": "checkpoints",
+        "batch_size": 4,
+        "input_nc": 1,
+        "n_epochs_decay": 0,
+        "lr": 0.0002,
+        "print_freq": 480,
+        "n_epochs": 10,
+        "dataset_mode": "aligned",
+        "display_freq": 480,
+        "name": "olracle-pix2pix",
+        "num_threads": 0,
+        "model": "pix2pix",
+        "dataroot": "datasets/olracle/train",
+        "save_epoch_freq": 50,
+        "output_nc": 1
+    },
+    "input_config_dir": "/opt/ml/input/config",
+    "input_data_config": {},
+    "input_dir": "/opt/ml/input",
+    "is_master": true,
+    "job_name": "pytorch-training-2020-11-19-07-57-16-035",
+    "log_level": 20,
+    "master_hostname": "algo-1",
+    "model_dir": "/opt/ml/model",
+    "module_dir": "s3://sagemaker-eu-central-1-213183576773/pytorch-training-2020-11-19-07-57-16-035/source/sourcedir.tar.gz",
+    "module_name": "train",
+    "network_interface_name": "eth0",
+    "num_cpus": 4,
+    "num_gpus": 1,
+    "output_data_dir": "/opt/ml/output/data",
+    "output_dir": "/opt/ml/output",
+    "output_intermediate_dir": "/opt/ml/output/intermediate",
+    "resource_config": {
+        "current_host": "algo-1",
+        "hosts": [
+            "algo-1"
+        ],
+        "network_interface_name": "eth0"
+    },
+    "user_entry_point": "train.py"
+}
+
+Environment variables:
+
+SM_HOSTS=["algo-1"]
+SM_NETWORK_INTERFACE_NAME=eth0
+SM_HPS={"batch_size":4,"checkpoints_dir":"checkpoints","dataroot":"datasets/olracle/train","dataset_mode":"aligned","display_freq":480,"input_nc":1,"lr":0.0002,"model":"pix2pix","n_epochs":10,"n_epochs_decay":0,"name":"olracle-pix2pix","num_threads":0,"output_nc":1,"print_freq":480,"save_epoch_freq":50}
+SM_USER_ENTRY_POINT=train.py
+SM_FRAMEWORK_PARAMS={}
+SM_RESOURCE_CONFIG={"current_host":"algo-1","hosts":["algo-1"],"network_interface_name":"eth0"}
+SM_INPUT_DATA_CONFIG={}
+SM_OUTPUT_DATA_DIR=/opt/ml/output/data
+SM_CHANNELS=[]
+SM_CURRENT_HOST=algo-1
+SM_MODULE_NAME=train
+SM_LOG_LEVEL=20
+SM_FRAMEWORK_MODULE=sagemaker_pytorch_container.training:main
+SM_INPUT_DIR=/opt/ml/input
+SM_INPUT_CONFIG_DIR=/opt/ml/input/config
+SM_OUTPUT_DIR=/opt/ml/output
+SM_NUM_CPUS=4
+SM_NUM_GPUS=1
+SM_MODEL_DIR=/opt/ml/model
+SM_MODULE_DIR=s3://sagemaker-eu-central-1-213183576773/pytorch-training-2020-11-19-07-57-16-035/source/sourcedir.tar.gz
+SM_TRAINING_ENV={"additional_framework_parameters":{},"channel_input_dirs":{},"current_host":"algo-1","framework_module":"sagemaker_pytorch_container.training:main","hosts":["algo-1"],"hyperparameters":{"batch_size":4,"checkpoints_dir":"checkpoints","dataroot":"datasets/olracle/train","dataset_mode":"aligned","display_freq":480,"input_nc":1,"lr":0.0002,"model":"pix2pix","n_epochs":10,"n_epochs_decay":0,"name":"olracle-pix2pix","num_threads":0,"output_nc":1,"print_freq":480,"save_epoch_freq":50},"input_config_dir":"/opt/ml/input/config","input_data_config":{},"input_dir":"/opt/ml/input","is_master":true,"job_name":"pytorch-training-2020-11-19-07-57-16-035","log_level":20,"master_hostname":"algo-1","model_dir":"/opt/ml/model","module_dir":"s3://sagemaker-eu-central-1-213183576773/pytorch-training-2020-11-19-07-57-16-035/source/sourcedir.tar.gz","module_name":"train","network_interface_name":"eth0","num_cpus":4,"num_gpus":1,"output_data_dir":"/opt/ml/output/data","output_dir":"/opt/ml/output","output_intermediate_dir":"/opt/ml/output/intermediate","resource_config":{"current_host":"algo-1","hosts":["algo-1"],"network_interface_name":"eth0"},"user_entry_point":"train.py"}
+SM_USER_ARGS=["--batch_size","4","--checkpoints_dir","checkpoints","--dataroot","datasets/olracle/train","--dataset_mode","aligned","--display_freq","480","--input_nc","1","--lr","0.0002","--model","pix2pix","--n_epochs","10","--n_epochs_decay","0","--name","olracle-pix2pix","--num_threads","0","--output_nc","1","--print_freq","480","--save_epoch_freq","50"]
+SM_OUTPUT_INTERMEDIATE_DIR=/opt/ml/output/intermediate
+SM_HP_CHECKPOINTS_DIR=checkpoints
+SM_HP_BATCH_SIZE=4
+SM_HP_INPUT_NC=1
+SM_HP_N_EPOCHS_DECAY=0
+SM_HP_LR=0.0002
+SM_HP_PRINT_FREQ=480
+SM_HP_N_EPOCHS=10
+SM_HP_DATASET_MODE=aligned
+SM_HP_DISPLAY_FREQ=480
+SM_HP_NAME=olracle-pix2pix
+SM_HP_NUM_THREADS=0
+SM_HP_MODEL=pix2pix
+SM_HP_DATAROOT=datasets/olracle/train
+SM_HP_SAVE_EPOCH_FREQ=50
+SM_HP_OUTPUT_NC=1
+PYTHONPATH=/opt/ml/code:/opt/conda/bin:/opt/conda/lib/python36.zip:/opt/conda/lib/python3.6:/opt/conda/lib/python3.6/lib-dynload:/opt/conda/lib/python3.6/site-packages
+
+Invoking script with the following command:
+
+/opt/conda/bin/python train.py --batch_size 4 --checkpoints_dir checkpoints --dataroot datasets/olracle/train --dataset_mode aligned --display_freq 480 --input_nc 1 --lr 0.0002 --model pix2pix --n_epochs 10 --n_epochs_decay 0 --name olracle-pix2pix --num_threads 0 --output_nc 1 --print_freq 480 --save_epoch_freq 50
+
+
+----------------- Options ---------------
+               batch_size: 4                             #011[default: 1]
+                    beta1: 0.5                           
+          checkpoints_dir: checkpoints                   #011[default: ./checkpoints]
+           continue_train: False                         
+                crop_size: 256                           
+                 dataroot: datasets/olracle/train        #011[default: None]
+             dataset_mode: aligned                       
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 480                           #011[default: 400]
+               display_id: 1                             
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: vanilla                       
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 1                             #011[default: 3]
+                  isTrain: True                          #011[default: None]
+                lambda_L1: 100.0                         
+                load_iter: 0                             #011[default: 0]
+                load_size: 286                           
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: pix2pix                       #011[default: cycle_gan]
+                 n_epochs: 10                            #011[default: 100]
+           n_epochs_decay: 0                             #011[default: 100]
+               n_layers_D: 3                             
+                     name: olracle-pix2pix               #011[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: unet_256                      
+                      ngf: 64                            
+               no_dropout: False                         
+                  no_flip: False                         
+                  no_html: False                         
+                     norm: batch                         
+              num_threads: 0                             #011[default: 4]
+                output_nc: 1                             #011[default: 3]
+                    phase: train                         
+                pool_size: 0                             
+               preprocess: resize_and_crop               
+               print_freq: 480                           #011[default: 100]
+             save_by_iter: False                         
+          save_epoch_freq: 50                            #011[default: 5]
+         save_latest_freq: 5000                          
+           serial_batches: False                         
+                   suffix:                               
+         update_html_freq: 1000                          
+                  verbose: False                         
+----------------- End -------------------
+dataset [AlignedDataset] was created
+Job Id = 1605772955
+The number of training images = 480
+initialize network with normal
+initialize network with normal
+model [Pix2PixModel] was created
+---------- Networks initialized -------------
+[Network G] Total number of parameters : 54.408 M
+[Network D] Total number of parameters : 2.765 M
+-----------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+Could not connect to Visdom server. 
+ Trying to start a server....
+Command: /opt/conda/bin/python -m visdom.server -p 8097 &>/dev/null &
+create web directory checkpoints/olracle-pix2pix/web...
+[2020-11-19 08:02:44.134 algo-1:81 INFO json_config.py:90] Creating hook from json_config at /opt/ml/input/config/debughookconfig.json.
+[2020-11-19 08:02:44.135 algo-1:81 INFO hook.py:183] tensorboard_dir has not been set for the hook. SMDebug will not be exporting tensorboard summaries.
+[2020-11-19 08:02:44.135 algo-1:81 INFO hook.py:228] Saving to /opt/ml/output/tensors
+[2020-11-19 08:02:44.160 algo-1:81 INFO hook.py:364] Monitoring the collections: losses
+[2020-11-19 08:02:44.160 algo-1:81 INFO hook.py:422] Hook is writing from the hook with pid: 81
+
+(epoch: 1, iters: 480, time: 0.163, data: 0.067) G_GAN: 1.092 G_L1: 24.190 D_real: 0.810 D_fake: 0.125 
+End of epoch 1 / 10 #011 Time Taken: 43 sec
+learning rate = 0.0002000
+(epoch: 2, iters: 480, time: 0.164, data: 0.030) G_GAN: 2.038 G_L1: 19.033 D_real: 0.107 D_fake: 0.657 
+End of epoch 2 / 10 #011 Time Taken: 37 sec
+learning rate = 0.0002000
+(epoch: 3, iters: 480, time: 0.164, data: 0.024) G_GAN: 1.993 G_L1: 18.919 D_real: 0.061 D_fake: 0.568 
+End of epoch 3 / 10 #011 Time Taken: 37 sec
+learning rate = 0.0002000
+(epoch: 4, iters: 480, time: 0.159, data: 0.024) G_GAN: 2.875 G_L1: 19.014 D_real: 0.255 D_fake: 0.069 
+End of epoch 4 / 10 #011 Time Taken: 37 sec
+learning rate = 0.0002000
+(epoch: 5, iters: 480, time: 0.166, data: 0.024) G_GAN: 1.959 G_L1: 18.722 D_real: 0.208 D_fake: 0.198 
+End of epoch 5 / 10 #011 Time Taken: 37 sec
+learning rate = 0.0002000
+(epoch: 6, iters: 480, time: 0.166, data: 0.029) G_GAN: 1.103 G_L1: 17.215 D_real: 0.490 D_fake: 0.193 
+End of epoch 6 / 10 #011 Time Taken: 37 sec
+learning rate = 0.0002000
+(epoch: 7, iters: 480, time: 0.166, data: 0.024) G_GAN: 1.978 G_L1: 19.220 D_real: 0.112 D_fake: 0.558 
+End of epoch 7 / 10 #011 Time Taken: 37 sec
+learning rate = 0.0002000
+(epoch: 8, iters: 480, time: 0.167, data: 0.023) G_GAN: 0.859 G_L1: 16.869 D_real: 0.911 D_fake: 0.132 
+End of epoch 8 / 10 #011 Time Taken: 37 sec
+learning rate = 0.0002000
+(epoch: 9, iters: 480, time: 0.167, data: 0.024) G_GAN: 2.074 G_L1: 18.388 D_real: 1.050 D_fake: 0.038 
+End of epoch 9 / 10 #011 Time Taken: 37 sec
+learning rate = 0.0002000
+(epoch: 10, iters: 480, time: 0.165, data: 0.024) G_GAN: 2.035 G_L1: 15.660 D_real: 0.718 D_fake: 0.048 
+End of epoch 10 / 10 #011 Time Taken: 38 sec
+learning rate = 0.0000000
+[2020-11-19 08:09:10.488 algo-1:81 INFO utils.py:25] The end of training job file will not be written for jobs running under SageMaker.
+2020-11-19 08:09:10,831 sagemaker-containers INFO     Reporting training SUCCESS
+
+2020-11-19 08:09:19 Uploading - Uploading generated training model
+2020-11-19 08:09:19 Completed - Training job completed
+Training seconds: 571
+Billable seconds: 571
+'create_image_uri' will be deprecated in favor of 'ImageURIProvider' class in SageMaker Python SDK v2.
+'create_image_uri' will be deprecated in favor of 'ImageURIProvider' class in SageMaker Python SDK v2.
+2020-11-19 08:14:24 Starting - Starting the training job...
+2020-11-19 08:14:26 Starting - Launching requested ML instances......
+2020-11-19 08:15:30 Starting - Preparing the instances for training......
+2020-11-19 08:16:42 Downloading - Downloading input data...
+2020-11-19 08:17:01 Training - Downloading the training image............
+2020-11-19 08:19:12 Training - Training image download completed. Training in progress.bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+2020-11-19 08:19:13,664 sagemaker-containers INFO     Imported framework sagemaker_pytorch_container.training
+2020-11-19 08:19:13,690 sagemaker_pytorch_container.training INFO     Block until all host DNS lookups succeed.
+2020-11-19 08:19:13,693 sagemaker_pytorch_container.training INFO     Invoking user training script.
+2020-11-19 08:19:15,713 sagemaker-containers INFO     Module default_user_module_name does not provide a setup.py. 
+Generating setup.py
+2020-11-19 08:19:15,713 sagemaker-containers INFO     Generating setup.cfg
+2020-11-19 08:19:15,713 sagemaker-containers INFO     Generating MANIFEST.in
+2020-11-19 08:19:15,714 sagemaker-containers INFO     Installing module with the following command:
+/opt/conda/bin/python -m pip install . -r requirements.txt
+Processing /tmp/tmptin6tjtl/module_dir
+Requirement already satisfied: torch>=0.4.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 1)) (1.5.0)
+Requirement already satisfied: torchvision>=0.2.1 in /opt/conda/lib/python3.6/site-packages (from -r requirements.txt (line 2)) (0.6.0)
+Collecting dominate>=2.3.1
+  Downloading dominate-2.6.0-py2.py3-none-any.whl (29 kB)
+Collecting visdom>=0.1.8.3
+  Downloading visdom-0.1.8.9.tar.gz (676 kB)
+Requirement already satisfied: numpy in /opt/conda/lib/python3.6/site-packages (from torch>=0.4.1->-r requirements.txt (line 1)) (1.16.4)
+Requirement already satisfied: future in /opt/conda/lib/python3.6/site-packages (from torch>=0.4.1->-r requirements.txt (line 1)) (0.17.1)
+Requirement already satisfied: pillow>=4.1.1 in /opt/conda/lib/python3.6/site-packages (from torchvision>=0.2.1->-r requirements.txt (line 2)) (7.1.0)
+Requirement already satisfied: scipy in /opt/conda/lib/python3.6/site-packages (from visdom>=0.1.8.3->-r requirements.txt (line 4)) (1.2.2)
+Requirement already satisfied: requests in /opt/conda/lib/python3.6/site-packages (from visdom>=0.1.8.3->-r requirements.txt (line 4)) (2.22.0)
+Collecting tornado
+  Downloading tornado-6.1-cp36-cp36m-manylinux2010_x86_64.whl (427 kB)
+Collecting pyzmq
+  Downloading pyzmq-20.0.0-cp36-cp36m-manylinux1_x86_64.whl (1.1 MB)
+Requirement already satisfied: six in /opt/conda/lib/python3.6/site-packages (from visdom>=0.1.8.3->-r requirements.txt (line 4)) (1.14.0)
+Collecting jsonpatch
+  Downloading jsonpatch-1.26-py2.py3-none-any.whl (11 kB)
+Collecting torchfile
+  Downloading torchfile-0.1.0.tar.gz (5.2 kB)
+Collecting websocket-client
+  Downloading websocket_client-0.57.0-py2.py3-none-any.whl (200 kB)
+Requirement already satisfied: idna<2.9,>=2.5 in /opt/conda/lib/python3.6/site-packages (from requests->visdom>=0.1.8.3->-r requirements.txt (line 4)) (2.8)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /opt/conda/lib/python3.6/site-packages (from requests->visdom>=0.1.8.3->-r requirements.txt (line 4)) (1.25.8)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /opt/conda/lib/python3.6/site-packages (from requests->visdom>=0.1.8.3->-r requirements.txt (line 4)) (3.0.4)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/conda/lib/python3.6/site-packages (from requests->visdom>=0.1.8.3->-r requirements.txt (line 4)) (2020.4.5.1)
+Collecting jsonpointer>=1.9
+  Downloading jsonpointer-2.0-py2.py3-none-any.whl (7.6 kB)
+Building wheels for collected packages: visdom, default-user-module-name, torchfile
+  Building wheel for visdom (setup.py): started
+  Building wheel for visdom (setup.py): finished with status 'done'
+  Created wheel for visdom: filename=visdom-0.1.8.9-py3-none-any.whl size=655249 sha256=55b6e52899d334e1d6f0152dde6f127841c7c207329facfe53d1501e0c09e674
+  Stored in directory: /root/.cache/pip/wheels/2d/cd/fb/005445070865d4e45365b2946ee88085a7392370f152cf371c
+  Building wheel for default-user-module-name (setup.py): started
+  Building wheel for default-user-module-name (setup.py): finished with status 'done'
+  Created wheel for default-user-module-name: filename=default_user_module_name-1.0.0-py2.py3-none-any.whl size=77122543 sha256=7e64e3e66aeebd9b0f353a015c46f9e8bfee37f60d92298ca20b2007a0aa2741
+  Stored in directory: /tmp/pip-ephem-wheel-cache-7pf5aob3/wheels/ac/15/14/86e595d380fbc356713078bd1e40a2d534e09bed96d1705b8f
+  Building wheel for torchfile (setup.py): started
+  Building wheel for torchfile (setup.py): finished with status 'done'
+  Created wheel for torchfile: filename=torchfile-0.1.0-py3-none-any.whl size=5711 sha256=b4433d9404c63db560df502ac1f83326c2752d260893c0bf71431a77834087c1
+  Stored in directory: /root/.cache/pip/wheels/55/79/ec/084a3a2e348d72852cc0c13c559c923c13ca54db86e699b681
+Successfully built visdom default-user-module-name torchfile
+Installing collected packages: dominate, tornado, pyzmq, jsonpointer, jsonpatch, torchfile, websocket-client, visdom, default-user-module-name
+Successfully installed default-user-module-name-1.0.0 dominate-2.6.0 jsonpatch-1.26 jsonpointer-2.0 pyzmq-20.0.0 torchfile-0.1.0 tornado-6.1 visdom-0.1.8.9 websocket-client-0.57.0
+WARNING: You are using pip version 20.1; however, version 20.2.4 is available.
+You should consider upgrading via the '/opt/conda/bin/python -m pip install --upgrade pip' command.
+2020-11-19 08:19:33,166 sagemaker-containers INFO     Invoking user script
+
+Training Env:
+
+{
+    "additional_framework_parameters": {},
+    "channel_input_dirs": {},
+    "current_host": "algo-1",
+    "framework_module": "sagemaker_pytorch_container.training:main",
+    "hosts": [
+        "algo-1"
+    ],
+    "hyperparameters": {
+        "checkpoints_dir": "checkpoints",
+        "batch_size": 4,
+        "input_nc": 1,
+        "n_epochs_decay": 1000,
+        "lr": 0.0002,
+        "print_freq": 480,
+        "n_epochs": 200,
+        "dataset_mode": "aligned",
+        "display_freq": 480,
+        "name": "olracle-pix2pix",
+        "num_threads": 0,
+        "model": "pix2pix",
+        "dataroot": "datasets/olracle/train",
+        "save_epoch_freq": 50,
+        "output_nc": 1
+    },
+    "input_config_dir": "/opt/ml/input/config",
+    "input_data_config": {},
+    "input_dir": "/opt/ml/input",
+    "is_master": true,
+    "job_name": "pytorch-training-2020-11-19-08-14-18-969",
+    "log_level": 20,
+    "master_hostname": "algo-1",
+    "model_dir": "/opt/ml/model",
+    "module_dir": "s3://sagemaker-eu-central-1-213183576773/pytorch-training-2020-11-19-08-14-18-969/source/sourcedir.tar.gz",
+    "module_name": "train",
+    "network_interface_name": "eth0",
+    "num_cpus": 4,
+    "num_gpus": 1,
+    "output_data_dir": "/opt/ml/output/data",
+    "output_dir": "/opt/ml/output",
+    "output_intermediate_dir": "/opt/ml/output/intermediate",
+    "resource_config": {
+        "current_host": "algo-1",
+        "hosts": [
+            "algo-1"
+        ],
+        "network_interface_name": "eth0"
+    },
+    "user_entry_point": "train.py"
+}
+
+Environment variables:
+
+SM_HOSTS=["algo-1"]
+SM_NETWORK_INTERFACE_NAME=eth0
+SM_HPS={"batch_size":4,"checkpoints_dir":"checkpoints","dataroot":"datasets/olracle/train","dataset_mode":"aligned","display_freq":480,"input_nc":1,"lr":0.0002,"model":"pix2pix","n_epochs":200,"n_epochs_decay":1000,"name":"olracle-pix2pix","num_threads":0,"output_nc":1,"print_freq":480,"save_epoch_freq":50}
+SM_USER_ENTRY_POINT=train.py
+SM_FRAMEWORK_PARAMS={}
+SM_RESOURCE_CONFIG={"current_host":"algo-1","hosts":["algo-1"],"network_interface_name":"eth0"}
+SM_INPUT_DATA_CONFIG={}
+SM_OUTPUT_DATA_DIR=/opt/ml/output/data
+SM_CHANNELS=[]
+SM_CURRENT_HOST=algo-1
+SM_MODULE_NAME=train
+SM_LOG_LEVEL=20
+SM_FRAMEWORK_MODULE=sagemaker_pytorch_container.training:main
+SM_INPUT_DIR=/opt/ml/input
+SM_INPUT_CONFIG_DIR=/opt/ml/input/config
+SM_OUTPUT_DIR=/opt/ml/output
+SM_NUM_CPUS=4
+SM_NUM_GPUS=1
+SM_MODEL_DIR=/opt/ml/model
+SM_MODULE_DIR=s3://sagemaker-eu-central-1-213183576773/pytorch-training-2020-11-19-08-14-18-969/source/sourcedir.tar.gz
+SM_TRAINING_ENV={"additional_framework_parameters":{},"channel_input_dirs":{},"current_host":"algo-1","framework_module":"sagemaker_pytorch_container.training:main","hosts":["algo-1"],"hyperparameters":{"batch_size":4,"checkpoints_dir":"checkpoints","dataroot":"datasets/olracle/train","dataset_mode":"aligned","display_freq":480,"input_nc":1,"lr":0.0002,"model":"pix2pix","n_epochs":200,"n_epochs_decay":1000,"name":"olracle-pix2pix","num_threads":0,"output_nc":1,"print_freq":480,"save_epoch_freq":50},"input_config_dir":"/opt/ml/input/config","input_data_config":{},"input_dir":"/opt/ml/input","is_master":true,"job_name":"pytorch-training-2020-11-19-08-14-18-969","log_level":20,"master_hostname":"algo-1","model_dir":"/opt/ml/model","module_dir":"s3://sagemaker-eu-central-1-213183576773/pytorch-training-2020-11-19-08-14-18-969/source/sourcedir.tar.gz","module_name":"train","network_interface_name":"eth0","num_cpus":4,"num_gpus":1,"output_data_dir":"/opt/ml/output/data","output_dir":"/opt/ml/output","output_intermediate_dir":"/opt/ml/output/intermediate","resource_config":{"current_host":"algo-1","hosts":["algo-1"],"network_interface_name":"eth0"},"user_entry_point":"train.py"}
+SM_USER_ARGS=["--batch_size","4","--checkpoints_dir","checkpoints","--dataroot","datasets/olracle/train","--dataset_mode","aligned","--display_freq","480","--input_nc","1","--lr","0.0002","--model","pix2pix","--n_epochs","200","--n_epochs_decay","1000","--name","olracle-pix2pix","--num_threads","0","--output_nc","1","--print_freq","480","--save_epoch_freq","50"]
+SM_OUTPUT_INTERMEDIATE_DIR=/opt/ml/output/intermediate
+SM_HP_CHECKPOINTS_DIR=checkpoints
+SM_HP_BATCH_SIZE=4
+SM_HP_INPUT_NC=1
+SM_HP_N_EPOCHS_DECAY=1000
+SM_HP_LR=0.0002
+SM_HP_PRINT_FREQ=480
+SM_HP_N_EPOCHS=200
+SM_HP_DATASET_MODE=aligned
+SM_HP_DISPLAY_FREQ=480
+SM_HP_NAME=olracle-pix2pix
+SM_HP_NUM_THREADS=0
+SM_HP_MODEL=pix2pix
+SM_HP_DATAROOT=datasets/olracle/train
+SM_HP_SAVE_EPOCH_FREQ=50
+SM_HP_OUTPUT_NC=1
+PYTHONPATH=/opt/ml/code:/opt/conda/bin:/opt/conda/lib/python36.zip:/opt/conda/lib/python3.6:/opt/conda/lib/python3.6/lib-dynload:/opt/conda/lib/python3.6/site-packages
+
+Invoking script with the following command:
+
+/opt/conda/bin/python train.py --batch_size 4 --checkpoints_dir checkpoints --dataroot datasets/olracle/train --dataset_mode aligned --display_freq 480 --input_nc 1 --lr 0.0002 --model pix2pix --n_epochs 200 --n_epochs_decay 1000 --name olracle-pix2pix --num_threads 0 --output_nc 1 --print_freq 480 --save_epoch_freq 50
+
+
+----------------- Options ---------------
+               batch_size: 4                             #011[default: 1]
+                    beta1: 0.5                           
+          checkpoints_dir: checkpoints                   #011[default: ./checkpoints]
+           continue_train: False                         
+                crop_size: 256                           
+                 dataroot: datasets/olracle/train        #011[default: None]
+             dataset_mode: aligned                       
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 480                           #011[default: 400]
+               display_id: 1                             
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: vanilla                       
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 1                             #011[default: 3]
+                  isTrain: True                          #011[default: None]
+                lambda_L1: 100.0                         
+                load_iter: 0                             #011[default: 0]
+                load_size: 286                           
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: pix2pix                       #011[default: cycle_gan]
+                 n_epochs: 200                           #011[default: 100]
+           n_epochs_decay: 1000                          #011[default: 100]
+               n_layers_D: 3                             
+                     name: olracle-pix2pix               #011[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: unet_256                      
+                      ngf: 64                            
+               no_dropout: False                         
+                  no_flip: False                         
+                  no_html: False                         
+                     norm: batch                         
+              num_threads: 0                             #011[default: 4]
+                output_nc: 1                             #011[default: 3]
+                    phase: train                         
+                pool_size: 0                             
+               preprocess: resize_and_crop               
+               print_freq: 480                           #011[default: 100]
+             save_by_iter: False                         
+          save_epoch_freq: 50                            #011[default: 5]
+         save_latest_freq: 5000                          
+           serial_batches: False                         
+                   suffix:                               
+         update_html_freq: 1000                          
+                  verbose: False                         
+----------------- End -------------------
+dataset [AlignedDataset] was created
+Job Id = 1605773974
+The number of training images = 480
+initialize network with normal
+initialize network with normal
+model [Pix2PixModel] was created
+---------- Networks initialized -------------
+[Network G] Total number of parameters : 54.408 M
+[Network D] Total number of parameters : 2.765 M
+-----------------------------------------------
+Exception in user code:
+------------------------------------------------------------
+Could not connect to Visdom server. 
+ Trying to start a server....
+Command: /opt/conda/bin/python -m visdom.server -p 8097 &>/dev/null &
+create web directory checkpoints/olracle-pix2pix/web...
+[2020-11-19 08:19:44.095 algo-1:80 INFO json_config.py:90] Creating hook from json_config at /opt/ml/input/config/debughookconfig.json.
+[2020-11-19 08:19:44.096 algo-1:80 INFO hook.py:183] tensorboard_dir has not been set for the hook. SMDebug will not be exporting tensorboard summaries.
+[2020-11-19 08:19:44.096 algo-1:80 INFO hook.py:228] Saving to /opt/ml/output/tensors
+[2020-11-19 08:19:44.120 algo-1:80 INFO hook.py:364] Monitoring the collections: losses
+[2020-11-19 08:19:44.120 algo-1:80 INFO hook.py:422] Hook is writing from the hook with pid: 80
+
+(epoch: 1, iters: 480, time: 0.174, data: 0.064) G_GAN: 2.680 G_L1: 24.810 D_real: 0.040 D_fake: 0.315 
+End of epoch 1 / 1200 #011 Time Taken: 45 sec
+learning rate = 0.0002000
+(epoch: 2, iters: 480, time: 0.170, data: 0.030) G_GAN: 3.469 G_L1: 21.735 D_real: 0.062 D_fake: 0.037 
+End of epoch 2 / 1200 #011 Time Taken: 39 sec
+learning rate = 0.0002000
+(epoch: 3, iters: 480, time: 0.173, data: 0.024) G_GAN: 2.736 G_L1: 21.670 D_real: 0.016 D_fake: 2.123 
+End of epoch 3 / 1200 #011 Time Taken: 39 sec
+learning rate = 0.0002000
+(epoch: 4, iters: 480, time: 0.173, data: 0.024) G_GAN: 2.621 G_L1: 18.001 D_real: 0.104 D_fake: 0.111 
+End of epoch 4 / 1200 #011 Time Taken: 39 sec
+learning rate = 0.0002000
+(epoch: 5, iters: 480, time: 0.173, data: 0.024) G_GAN: 2.503 G_L1: 21.733 D_real: 0.071 D_fake: 0.166 
+End of epoch 5 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 6, iters: 480, time: 0.177, data: 0.024) G_GAN: 0.882 G_L1: 19.643 D_real: 0.670 D_fake: 0.183 
+End of epoch 6 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 7, iters: 480, time: 0.176, data: 0.027) G_GAN: 2.120 G_L1: 18.683 D_real: 0.118 D_fake: 0.364 
+End of epoch 7 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 8, iters: 480, time: 0.175, data: 0.025) G_GAN: 1.128 G_L1: 19.905 D_real: 0.569 D_fake: 0.331 
+End of epoch 8 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 9, iters: 480, time: 0.175, data: 0.029) G_GAN: 2.451 G_L1: 20.943 D_real: 0.014 D_fake: 0.314 
+End of epoch 9 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 10, iters: 480, time: 0.177, data: 0.030) G_GAN: 2.033 G_L1: 21.074 D_real: 0.079 D_fake: 0.566 
+End of epoch 10 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 11, total_iters 5000)
+(epoch: 11, iters: 480, time: 0.176, data: 0.031) G_GAN: 0.295 G_L1: 18.327 D_real: 1.518 D_fake: 0.110 
+End of epoch 11 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 12, iters: 480, time: 0.176, data: 0.030) G_GAN: 1.959 G_L1: 14.712 D_real: 0.627 D_fake: 0.049 
+End of epoch 12 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 13, iters: 480, time: 0.176, data: 0.024) G_GAN: 1.121 G_L1: 17.329 D_real: 1.651 D_fake: 0.081 
+End of epoch 13 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 14, iters: 480, time: 0.179, data: 0.030) G_GAN: 1.999 G_L1: 16.601 D_real: 0.694 D_fake: 0.057 
+End of epoch 14 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 15, iters: 480, time: 0.181, data: 0.027) G_GAN: 2.529 G_L1: 21.918 D_real: 0.049 D_fake: 0.303 
+End of epoch 15 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 16, iters: 480, time: 0.181, data: 0.023) G_GAN: 1.621 G_L1: 17.124 D_real: 0.888 D_fake: 0.042 
+End of epoch 16 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 17, iters: 480, time: 0.181, data: 0.024) G_GAN: 2.923 G_L1: 20.760 D_real: 0.005 D_fake: 0.320 
+End of epoch 17 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 18, iters: 480, time: 0.183, data: 0.023) G_GAN: 0.665 G_L1: 15.826 D_real: 0.864 D_fake: 0.140 
+End of epoch 18 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 19, iters: 480, time: 0.179, data: 0.023) G_GAN: 1.666 G_L1: 18.914 D_real: 0.090 D_fake: 0.347 
+End of epoch 19 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 20, iters: 480, time: 0.182, data: 0.024) G_GAN: 3.572 G_L1: 23.088 D_real: 0.033 D_fake: 0.064 
+End of epoch 20 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 21, total_iters 10000)
+(epoch: 21, iters: 480, time: 0.182, data: 0.024) G_GAN: 2.884 G_L1: 21.025 D_real: 0.169 D_fake: 0.205 
+End of epoch 21 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 22, iters: 480, time: 0.183, data: 0.024) G_GAN: 2.644 G_L1: 19.367 D_real: 0.051 D_fake: 1.062 
+End of epoch 22 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 23, iters: 480, time: 0.184, data: 0.024) G_GAN: 2.863 G_L1: 19.746 D_real: 0.036 D_fake: 0.139 
+End of epoch 23 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 24, iters: 480, time: 0.186, data: 0.023) G_GAN: 1.758 G_L1: 17.849 D_real: 0.675 D_fake: 0.069 
+End of epoch 24 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 25, iters: 480, time: 0.185, data: 0.024) G_GAN: 2.569 G_L1: 20.455 D_real: 0.027 D_fake: 0.505 
+End of epoch 25 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 26, iters: 480, time: 0.188, data: 0.024) G_GAN: 3.557 G_L1: 20.438 D_real: 0.054 D_fake: 0.127 
+End of epoch 26 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 27, iters: 480, time: 0.184, data: 0.023) G_GAN: 3.727 G_L1: 22.990 D_real: 0.005 D_fake: 0.871 
+End of epoch 27 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 28, iters: 480, time: 0.186, data: 0.029) G_GAN: 1.476 G_L1: 17.084 D_real: 0.396 D_fake: 0.083 
+End of epoch 28 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 29, iters: 480, time: 0.188, data: 0.023) G_GAN: 2.448 G_L1: 16.243 D_real: 0.151 D_fake: 0.141 
+End of epoch 29 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 30, iters: 480, time: 0.186, data: 0.029) G_GAN: 2.763 G_L1: 20.287 D_real: 0.007 D_fake: 0.378 
+End of epoch 30 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 31, iters: 480, time: 0.189, data: 0.030) G_GAN: 3.119 G_L1: 18.998 D_real: 0.091 D_fake: 0.444 
+End of epoch 31 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 32, total_iters 15000)
+(epoch: 32, iters: 480, time: 0.189, data: 0.024) G_GAN: 3.065 G_L1: 21.114 D_real: 0.299 D_fake: 0.107 
+End of epoch 32 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 33, iters: 480, time: 0.190, data: 0.024) G_GAN: 1.079 G_L1: 18.281 D_real: 0.430 D_fake: 0.249 
+End of epoch 33 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 34, iters: 480, time: 0.191, data: 0.024) G_GAN: 2.029 G_L1: 18.889 D_real: 0.047 D_fake: 0.221 
+End of epoch 34 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 35, iters: 480, time: 0.191, data: 0.031) G_GAN: 2.181 G_L1: 19.412 D_real: 0.158 D_fake: 0.181 
+End of epoch 35 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 36, iters: 480, time: 0.192, data: 0.029) G_GAN: 3.016 G_L1: 16.812 D_real: 0.121 D_fake: 0.465 
+End of epoch 36 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 37, iters: 480, time: 0.192, data: 0.030) G_GAN: 3.945 G_L1: 25.352 D_real: 0.017 D_fake: 0.037 
+End of epoch 37 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 38, iters: 480, time: 0.191, data: 0.028) G_GAN: 4.367 G_L1: 22.835 D_real: 0.000 D_fake: 0.930 
+End of epoch 38 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 39, iters: 480, time: 0.193, data: 0.023) G_GAN: 2.869 G_L1: 14.907 D_real: 0.411 D_fake: 0.048 
+End of epoch 39 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 40, iters: 480, time: 0.194, data: 0.029) G_GAN: 3.828 G_L1: 17.060 D_real: 0.052 D_fake: 0.119 
+End of epoch 40 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 41, iters: 480, time: 0.195, data: 0.023) G_GAN: 1.102 G_L1: 18.815 D_real: 0.841 D_fake: 0.083 
+End of epoch 41 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 42, total_iters 20000)
+(epoch: 42, iters: 480, time: 0.209, data: 0.023) G_GAN: 2.276 G_L1: 17.346 D_real: 0.008 D_fake: 0.435 
+End of epoch 42 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 43, iters: 480, time: 0.195, data: 0.024) G_GAN: 2.378 G_L1: 14.930 D_real: 0.098 D_fake: 0.148 
+End of epoch 43 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 44, iters: 480, time: 0.200, data: 0.030) G_GAN: 1.736 G_L1: 14.358 D_real: 0.182 D_fake: 0.132 
+End of epoch 44 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 45, iters: 480, time: 0.197, data: 0.023) G_GAN: 3.088 G_L1: 20.983 D_real: 0.521 D_fake: 0.035 
+End of epoch 45 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 46, iters: 480, time: 0.199, data: 0.023) G_GAN: 2.771 G_L1: 12.463 D_real: 0.232 D_fake: 0.035 
+End of epoch 46 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 47, iters: 480, time: 0.197, data: 0.030) G_GAN: 2.900 G_L1: 20.633 D_real: 0.009 D_fake: 0.150 
+End of epoch 47 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 48, iters: 480, time: 0.198, data: 0.030) G_GAN: 2.903 G_L1: 19.542 D_real: 0.187 D_fake: 0.043 
+End of epoch 48 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 49, iters: 480, time: 0.201, data: 0.024) G_GAN: 2.399 G_L1: 15.771 D_real: 0.140 D_fake: 0.052 
+End of epoch 49 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 50, iters: 480, time: 0.198, data: 0.028) G_GAN: 3.303 G_L1: 20.728 D_real: 0.010 D_fake: 0.109 
+End of epoch 50 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 51, iters: 480, time: 0.202, data: 0.030) G_GAN: 3.936 G_L1: 19.009 D_real: 0.242 D_fake: 0.016 
+End of epoch 51 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 52, iters: 480, time: 0.201, data: 0.024) G_GAN: 1.123 G_L1: 12.358 D_real: 1.406 D_fake: 0.018 
+End of epoch 52 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 53, total_iters 25000)
+(epoch: 53, iters: 480, time: 0.201, data: 0.024) G_GAN: 4.044 G_L1: 21.192 D_real: 0.056 D_fake: 0.042 
+End of epoch 53 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 54, iters: 480, time: 0.203, data: 0.024) G_GAN: 4.503 G_L1: 17.732 D_real: 0.006 D_fake: 0.168 
+End of epoch 54 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 55, iters: 480, time: 0.192, data: 0.029) G_GAN: 3.418 G_L1: 15.904 D_real: 2.837 D_fake: 2.444 
+End of epoch 55 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 56, iters: 480, time: 0.205, data: 0.023) G_GAN: 3.252 G_L1: 18.607 D_real: 0.016 D_fake: 0.329 
+End of epoch 56 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 57, iters: 480, time: 0.216, data: 0.023) G_GAN: 3.657 G_L1: 23.020 D_real: 0.133 D_fake: 0.062 
+End of epoch 57 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 58, iters: 480, time: 0.203, data: 0.024) G_GAN: 2.726 G_L1: 23.320 D_real: 0.032 D_fake: 0.202 
+End of epoch 58 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 59, iters: 480, time: 0.206, data: 0.029) G_GAN: 3.626 G_L1: 17.007 D_real: 0.033 D_fake: 0.042 
+End of epoch 59 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 60, iters: 480, time: 0.207, data: 0.023) G_GAN: 2.946 G_L1: 16.561 D_real: 0.027 D_fake: 0.089 
+End of epoch 60 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 61, iters: 480, time: 0.206, data: 0.023) G_GAN: 1.949 G_L1: 13.312 D_real: 0.374 D_fake: 0.028 
+End of epoch 61 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 62, iters: 480, time: 0.205, data: 0.024) G_GAN: 2.985 G_L1: 23.406 D_real: 0.003 D_fake: 0.074 
+End of epoch 62 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 63, total_iters 30000)
+(epoch: 63, iters: 480, time: 0.209, data: 0.030) G_GAN: 3.885 G_L1: 21.241 D_real: 0.021 D_fake: 0.063 
+End of epoch 63 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 64, iters: 480, time: 0.208, data: 0.024) G_GAN: 2.106 G_L1: 13.585 D_real: 1.929 D_fake: 0.408 
+End of epoch 64 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 65, iters: 480, time: 0.210, data: 0.024) G_GAN: 2.981 G_L1: 16.039 D_real: 0.128 D_fake: 0.040 
+End of epoch 65 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 66, iters: 480, time: 0.209, data: 0.024) G_GAN: 3.303 G_L1: 19.310 D_real: 0.141 D_fake: 0.013 
+End of epoch 66 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 67, iters: 480, time: 0.209, data: 0.024) G_GAN: 3.598 G_L1: 18.134 D_real: 0.009 D_fake: 0.063 
+End of epoch 67 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 68, iters: 480, time: 0.222, data: 0.030) G_GAN: 4.627 G_L1: 17.401 D_real: 0.052 D_fake: 0.019 
+End of epoch 68 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 69, iters: 480, time: 0.212, data: 0.023) G_GAN: 3.167 G_L1: 22.130 D_real: 0.022 D_fake: 0.105 
+End of epoch 69 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 70, iters: 480, time: 0.212, data: 0.024) G_GAN: 3.282 G_L1: 16.856 D_real: 0.013 D_fake: 0.489 
+End of epoch 70 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 71, iters: 480, time: 0.211, data: 0.024) G_GAN: 3.684 G_L1: 22.661 D_real: 0.009 D_fake: 0.196 
+End of epoch 71 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 72, iters: 480, time: 0.212, data: 0.030) G_GAN: 3.647 G_L1: 20.150 D_real: 0.012 D_fake: 0.091 
+End of epoch 72 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 73, total_iters 35000)
+(epoch: 73, iters: 480, time: 0.213, data: 0.030) G_GAN: 3.567 G_L1: 20.049 D_real: 0.075 D_fake: 0.176 
+End of epoch 73 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 74, iters: 480, time: 0.212, data: 0.023) G_GAN: 0.032 G_L1: 13.599 D_real: 1.873 D_fake: 0.069 
+End of epoch 74 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 75, iters: 480, time: 0.213, data: 0.023) G_GAN: 4.519 G_L1: 15.779 D_real: 0.034 D_fake: 0.016 
+End of epoch 75 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 76, iters: 480, time: 0.216, data: 0.029) G_GAN: 4.125 G_L1: 17.896 D_real: 0.443 D_fake: 0.011 
+End of epoch 76 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 77, iters: 480, time: 0.214, data: 0.023) G_GAN: 4.834 G_L1: 19.988 D_real: 0.014 D_fake: 0.018 
+End of epoch 77 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 78, iters: 480, time: 0.230, data: 0.030) G_GAN: 4.673 G_L1: 18.632 D_real: 0.030 D_fake: 0.010 
+End of epoch 78 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 79, iters: 480, time: 0.217, data: 0.030) G_GAN: 3.580 G_L1: 16.101 D_real: 0.254 D_fake: 0.045 
+End of epoch 79 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 80, iters: 480, time: 0.216, data: 0.030) G_GAN: 3.585 G_L1: 15.847 D_real: 0.082 D_fake: 0.068 
+End of epoch 80 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 81, iters: 480, time: 0.214, data: 0.029) G_GAN: 5.829 G_L1: 19.226 D_real: 0.017 D_fake: 0.004 
+End of epoch 81 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 82, iters: 480, time: 0.218, data: 0.024) G_GAN: 5.093 G_L1: 19.666 D_real: 0.011 D_fake: 0.048 
+End of epoch 82 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 83, iters: 480, time: 0.218, data: 0.030) G_GAN: 4.818 G_L1: 19.874 D_real: 0.005 D_fake: 0.018 
+End of epoch 83 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 84, total_iters 40000)
+(epoch: 84, iters: 480, time: 0.219, data: 0.024) G_GAN: 4.654 G_L1: 19.557 D_real: 0.706 D_fake: 0.008 
+End of epoch 84 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 85, iters: 480, time: 0.218, data: 0.024) G_GAN: 3.331 G_L1: 15.928 D_real: 0.054 D_fake: 0.050 
+End of epoch 85 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 86, iters: 480, time: 0.219, data: 0.030) G_GAN: 3.138 G_L1: 21.610 D_real: 0.023 D_fake: 0.113 
+End of epoch 86 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 87, iters: 480, time: 0.234, data: 0.024) G_GAN: 5.053 G_L1: 23.986 D_real: 0.009 D_fake: 0.012 
+End of epoch 87 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 88, iters: 480, time: 0.220, data: 0.029) G_GAN: 2.949 G_L1: 17.874 D_real: 0.070 D_fake: 0.086 
+End of epoch 88 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 89, iters: 480, time: 0.220, data: 0.024) G_GAN: 2.757 G_L1: 15.184 D_real: 0.040 D_fake: 0.041 
+End of epoch 89 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 90, iters: 480, time: 0.222, data: 0.024) G_GAN: 3.095 G_L1: 16.784 D_real: 0.104 D_fake: 0.090 
+End of epoch 90 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 91, iters: 480, time: 0.221, data: 0.023) G_GAN: 3.668 G_L1: 19.471 D_real: 0.015 D_fake: 0.089 
+End of epoch 91 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 92, iters: 480, time: 0.221, data: 0.025) G_GAN: 1.850 G_L1: 18.611 D_real: 1.263 D_fake: 0.005 
+End of epoch 92 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 93, iters: 480, time: 0.222, data: 0.024) G_GAN: 5.076 G_L1: 16.265 D_real: 0.012 D_fake: 0.008 
+End of epoch 93 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 94, total_iters 45000)
+(epoch: 94, iters: 480, time: 0.223, data: 0.030) G_GAN: 3.605 G_L1: 17.418 D_real: 0.053 D_fake: 0.127 
+End of epoch 94 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 95, iters: 480, time: 0.239, data: 0.024) G_GAN: 3.266 G_L1: 19.536 D_real: 0.025 D_fake: 0.060 
+End of epoch 95 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 96, iters: 480, time: 0.225, data: 0.024) G_GAN: 4.018 G_L1: 16.228 D_real: 0.097 D_fake: 0.015 
+End of epoch 96 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 97, iters: 480, time: 0.223, data: 0.024) G_GAN: 4.092 G_L1: 14.816 D_real: 0.436 D_fake: 0.012 
+End of epoch 97 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 98, iters: 480, time: 0.229, data: 0.025) G_GAN: 4.367 G_L1: 18.708 D_real: 0.009 D_fake: 0.015 
+End of epoch 98 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 99, iters: 480, time: 0.228, data: 0.024) G_GAN: 5.705 G_L1: 21.474 D_real: 0.052 D_fake: 0.004 
+End of epoch 99 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 100, iters: 480, time: 0.226, data: 0.030) G_GAN: 4.212 G_L1: 21.386 D_real: 0.001 D_fake: 0.093 
+End of epoch 100 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 101, iters: 480, time: 0.230, data: 0.024) G_GAN: 3.239 G_L1: 19.317 D_real: 0.002 D_fake: 0.025 
+End of epoch 101 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 102, iters: 480, time: 0.234, data: 0.024) G_GAN: 4.398 G_L1: 18.577 D_real: 0.017 D_fake: 1.626 
+End of epoch 102 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 103, iters: 480, time: 0.242, data: 0.024) G_GAN: 1.127 G_L1: 13.705 D_real: 0.258 D_fake: 0.350 
+End of epoch 103 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 104, iters: 480, time: 0.229, data: 0.024) G_GAN: 3.899 G_L1: 20.396 D_real: 0.005 D_fake: 0.355 
+End of epoch 104 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 105, total_iters 50000)
+(epoch: 105, iters: 480, time: 0.234, data: 0.024) G_GAN: 5.490 G_L1: 22.879 D_real: 0.009 D_fake: 0.755 
+End of epoch 105 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 106, iters: 480, time: 0.230, data: 0.024) G_GAN: 2.267 G_L1: 19.617 D_real: 0.578 D_fake: 0.006 
+End of epoch 106 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 107, iters: 480, time: 0.230, data: 0.030) G_GAN: 4.054 G_L1: 22.122 D_real: 0.001 D_fake: 0.067 
+End of epoch 107 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 108, iters: 480, time: 0.232, data: 0.024) G_GAN: 2.865 G_L1: 18.790 D_real: 0.028 D_fake: 0.347 
+End of epoch 108 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 109, iters: 480, time: 0.230, data: 0.024) G_GAN: 5.186 G_L1: 17.417 D_real: 0.003 D_fake: 0.009 
+End of epoch 109 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 110, iters: 480, time: 0.247, data: 0.024) G_GAN: 3.126 G_L1: 20.902 D_real: 0.000 D_fake: 0.081 
+End of epoch 110 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 111, iters: 480, time: 0.232, data: 0.023) G_GAN: 4.443 G_L1: 20.842 D_real: 0.002 D_fake: 0.062 
+End of epoch 111 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 112, iters: 480, time: 0.234, data: 0.024) G_GAN: 4.743 G_L1: 19.270 D_real: 0.018 D_fake: 0.013 
+End of epoch 112 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 113, iters: 480, time: 0.236, data: 0.024) G_GAN: 6.895 G_L1: 18.911 D_real: 0.006 D_fake: 0.002 
+End of epoch 113 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 114, iters: 480, time: 0.237, data: 0.024) G_GAN: 1.431 G_L1: 21.473 D_real: 1.449 D_fake: 0.010 
+End of epoch 114 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 115, total_iters 55000)
+(epoch: 115, iters: 480, time: 0.236, data: 0.023) G_GAN: 4.046 G_L1: 19.742 D_real: 0.022 D_fake: 0.026 
+End of epoch 115 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 116, iters: 480, time: 0.246, data: 0.024) G_GAN: 4.992 G_L1: 18.158 D_real: 0.010 D_fake: 0.009 
+End of epoch 116 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 117, iters: 480, time: 0.226, data: 0.030) G_GAN: 3.463 G_L1: 27.005 D_real: 0.003 D_fake: 0.285 
+End of epoch 117 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 118, iters: 480, time: 0.239, data: 0.024) G_GAN: 5.685 G_L1: 22.968 D_real: 0.001 D_fake: 0.006 
+End of epoch 118 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 119, iters: 480, time: 0.236, data: 0.024) G_GAN: 2.819 G_L1: 18.430 D_real: 0.020 D_fake: 1.315 
+End of epoch 119 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 120, iters: 480, time: 0.238, data: 0.024) G_GAN: 4.982 G_L1: 22.308 D_real: 0.000 D_fake: 0.010 
+End of epoch 120 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 121, iters: 480, time: 0.238, data: 0.024) G_GAN: 5.134 G_L1: 18.036 D_real: 0.002 D_fake: 0.009 
+End of epoch 121 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 122, iters: 480, time: 0.253, data: 0.026) G_GAN: 6.642 G_L1: 15.042 D_real: 0.089 D_fake: 0.001 
+End of epoch 122 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 123, iters: 480, time: 0.244, data: 0.025) G_GAN: 4.908 G_L1: 16.704 D_real: 0.065 D_fake: 0.022 
+End of epoch 123 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 124, iters: 480, time: 0.239, data: 0.024) G_GAN: 3.317 G_L1: 14.739 D_real: 0.142 D_fake: 0.014 
+End of epoch 124 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 125, iters: 480, time: 0.244, data: 0.029) G_GAN: 5.538 G_L1: 13.075 D_real: 0.210 D_fake: 0.000 
+saving the latest model (epoch 125, total_iters 60000)
+End of epoch 125 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 126, iters: 480, time: 0.244, data: 0.029) G_GAN: 4.962 G_L1: 17.915 D_real: 0.017 D_fake: 0.009 
+End of epoch 126 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 127, iters: 480, time: 0.241, data: 0.024) G_GAN: 4.327 G_L1: 20.575 D_real: 0.061 D_fake: 0.034 
+End of epoch 127 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 128, iters: 480, time: 0.261, data: 0.030) G_GAN: 4.730 G_L1: 18.010 D_real: 0.007 D_fake: 0.016 
+End of epoch 128 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 129, iters: 480, time: 0.236, data: 0.028) G_GAN: 5.802 G_L1: 16.825 D_real: 0.013 D_fake: 0.005 
+End of epoch 129 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 130, iters: 480, time: 0.248, data: 0.030) G_GAN: 5.105 G_L1: 19.095 D_real: 0.008 D_fake: 0.008 
+End of epoch 130 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 131, iters: 480, time: 0.238, data: 0.027) G_GAN: 4.749 G_L1: 18.930 D_real: 0.003 D_fake: 0.010 
+End of epoch 131 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 132, iters: 480, time: 0.243, data: 0.024) G_GAN: 3.325 G_L1: 18.828 D_real: 0.171 D_fake: 0.012 
+End of epoch 132 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 133, iters: 480, time: 0.244, data: 0.023) G_GAN: 5.911 G_L1: 22.041 D_real: 0.186 D_fake: 0.013 
+End of epoch 133 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 134, iters: 480, time: 0.256, data: 0.030) G_GAN: 2.604 G_L1: 14.145 D_real: 0.235 D_fake: 0.033 
+End of epoch 134 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 135, iters: 480, time: 0.247, data: 0.032) G_GAN: 5.518 G_L1: 25.923 D_real: 0.028 D_fake: 0.009 
+End of epoch 135 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 136, total_iters 65000)
+(epoch: 136, iters: 480, time: 0.246, data: 0.024) G_GAN: 4.211 G_L1: 17.758 D_real: 0.014 D_fake: 0.028 
+End of epoch 136 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 137, iters: 480, time: 0.250, data: 0.030) G_GAN: 5.697 G_L1: 19.380 D_real: 0.012 D_fake: 0.004 
+End of epoch 137 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 138, iters: 480, time: 0.251, data: 0.030) G_GAN: 6.370 G_L1: 17.744 D_real: 0.003 D_fake: 0.003 
+End of epoch 138 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 139, iters: 480, time: 0.259, data: 0.023) G_GAN: 2.646 G_L1: 20.537 D_real: 0.265 D_fake: 1.076 
+End of epoch 139 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 140, iters: 480, time: 0.251, data: 0.023) G_GAN: 3.809 G_L1: 19.123 D_real: 0.016 D_fake: 0.176 
+End of epoch 140 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 141, iters: 480, time: 0.251, data: 0.024) G_GAN: 4.075 G_L1: 17.816 D_real: 0.011 D_fake: 0.054 
+End of epoch 141 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 142, iters: 480, time: 0.247, data: 0.024) G_GAN: 4.145 G_L1: 18.801 D_real: 0.001 D_fake: 0.046 
+End of epoch 142 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 143, iters: 480, time: 0.250, data: 0.023) G_GAN: 4.722 G_L1: 19.724 D_real: 0.006 D_fake: 0.016 
+End of epoch 143 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 144, iters: 480, time: 0.268, data: 0.023) G_GAN: 6.678 G_L1: 20.119 D_real: 0.017 D_fake: 0.002 
+End of epoch 144 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 145, iters: 480, time: 0.253, data: 0.023) G_GAN: 5.605 G_L1: 17.170 D_real: 0.010 D_fake: 0.008 
+End of epoch 145 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 146, total_iters 70000)
+(epoch: 146, iters: 480, time: 0.256, data: 0.030) G_GAN: 2.240 G_L1: 21.408 D_real: 1.593 D_fake: 0.022 
+End of epoch 146 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 147, iters: 480, time: 0.257, data: 0.024) G_GAN: 4.905 G_L1: 21.375 D_real: 0.002 D_fake: 0.011 
+End of epoch 147 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 148, iters: 480, time: 0.259, data: 0.024) G_GAN: 5.709 G_L1: 19.404 D_real: 0.013 D_fake: 0.005 
+End of epoch 148 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 149, iters: 480, time: 0.272, data: 0.030) G_GAN: 4.264 G_L1: 22.445 D_real: 0.003 D_fake: 0.070 
+End of epoch 149 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 150, iters: 480, time: 0.253, data: 0.025) G_GAN: 7.413 G_L1: 17.321 D_real: 0.008 D_fake: 0.001 
+End of epoch 150 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 151, iters: 480, time: 0.258, data: 0.023) G_GAN: 0.434 G_L1: 16.309 D_real: 2.246 D_fake: 0.082 
+End of epoch 151 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 152, iters: 480, time: 0.259, data: 0.023) G_GAN: 3.315 G_L1: 22.680 D_real: 0.006 D_fake: 0.677 
+End of epoch 152 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 153, iters: 480, time: 0.260, data: 0.024) G_GAN: 2.860 G_L1: 20.320 D_real: 0.002 D_fake: 0.157 
+End of epoch 153 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 154, iters: 480, time: 0.271, data: 0.024) G_GAN: 5.043 G_L1: 20.035 D_real: 0.008 D_fake: 0.010 
+End of epoch 154 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 155, iters: 480, time: 0.262, data: 0.023) G_GAN: 5.406 G_L1: 21.492 D_real: 0.002 D_fake: 0.007 
+End of epoch 155 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 156, iters: 480, time: 0.255, data: 0.024) G_GAN: 3.724 G_L1: 19.334 D_real: 0.002 D_fake: 0.087 
+End of epoch 156 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 157, total_iters 75000)
+(epoch: 157, iters: 480, time: 0.259, data: 0.029) G_GAN: 5.834 G_L1: 18.317 D_real: 0.008 D_fake: 0.004 
+End of epoch 157 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 158, iters: 480, time: 0.254, data: 0.030) G_GAN: 3.816 G_L1: 15.798 D_real: 0.032 D_fake: 0.039 
+End of epoch 158 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 159, iters: 480, time: 0.272, data: 0.023) G_GAN: 3.797 G_L1: 16.675 D_real: 0.372 D_fake: 1.089 
+End of epoch 159 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 160, iters: 480, time: 0.263, data: 0.024) G_GAN: 3.827 G_L1: 19.794 D_real: 0.002 D_fake: 0.051 
+End of epoch 160 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 161, iters: 480, time: 0.258, data: 0.024) G_GAN: 4.003 G_L1: 17.176 D_real: 0.003 D_fake: 0.094 
+End of epoch 161 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 162, iters: 480, time: 0.264, data: 0.024) G_GAN: 3.593 G_L1: 18.941 D_real: 0.324 D_fake: 0.018 
+End of epoch 162 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 163, iters: 480, time: 0.276, data: 0.024) G_GAN: 3.907 G_L1: 19.597 D_real: 0.001 D_fake: 0.582 
+End of epoch 163 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 164, iters: 480, time: 0.266, data: 0.024) G_GAN: 2.897 G_L1: 19.252 D_real: 0.005 D_fake: 0.392 
+End of epoch 164 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 165, iters: 480, time: 0.261, data: 0.023) G_GAN: 6.958 G_L1: 19.863 D_real: 0.014 D_fake: 0.002 
+End of epoch 165 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 166, iters: 480, time: 0.264, data: 0.028) G_GAN: 6.737 G_L1: 23.379 D_real: 0.001 D_fake: 0.002 
+End of epoch 166 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 167, total_iters 80000)
+(epoch: 167, iters: 480, time: 0.267, data: 0.027) G_GAN: 5.820 G_L1: 18.892 D_real: 0.001 D_fake: 0.007 
+End of epoch 167 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 168, iters: 480, time: 0.279, data: 0.024) G_GAN: 5.234 G_L1: 18.169 D_real: 0.004 D_fake: 0.009 
+End of epoch 168 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 169, iters: 480, time: 0.266, data: 0.030) G_GAN: 4.632 G_L1: 21.422 D_real: 0.001 D_fake: 0.007 
+End of epoch 169 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 170, iters: 480, time: 0.266, data: 0.024) G_GAN: 5.066 G_L1: 24.411 D_real: 0.001 D_fake: 0.105 
+End of epoch 170 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 171, iters: 480, time: 0.267, data: 0.025) G_GAN: 4.603 G_L1: 21.422 D_real: 0.003 D_fake: 0.016 
+End of epoch 171 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 172, iters: 480, time: 0.283, data: 0.024) G_GAN: 2.681 G_L1: 18.656 D_real: 0.505 D_fake: 0.020 
+End of epoch 172 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 173, iters: 480, time: 0.267, data: 0.023) G_GAN: 5.433 G_L1: 14.774 D_real: 0.013 D_fake: 0.006 
+End of epoch 173 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 174, iters: 480, time: 0.266, data: 0.024) G_GAN: 3.743 G_L1: 22.272 D_real: 0.034 D_fake: 0.034 
+End of epoch 174 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 175, iters: 480, time: 0.270, data: 0.024) G_GAN: 2.918 G_L1: 17.707 D_real: 0.475 D_fake: 0.002 
+End of epoch 175 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 176, iters: 480, time: 0.288, data: 0.030) G_GAN: 6.095 G_L1: 20.007 D_real: 0.000 D_fake: 0.005 
+End of epoch 176 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 177, iters: 480, time: 0.272, data: 0.030) G_GAN: 4.716 G_L1: 23.706 D_real: 0.008 D_fake: 0.017 
+End of epoch 177 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 178, total_iters 85000)
+(epoch: 178, iters: 480, time: 0.274, data: 0.030) G_GAN: 5.262 G_L1: 18.814 D_real: 0.050 D_fake: 0.002 
+End of epoch 178 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0002000
+(epoch: 179, iters: 480, time: 0.275, data: 0.024) G_GAN: 6.607 G_L1: 18.249 D_real: 5.326 D_fake: 8.152 
+End of epoch 179 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 180, iters: 480, time: 0.274, data: 0.024) G_GAN: 5.167 G_L1: 19.432 D_real: 0.014 D_fake: 0.009 
+End of epoch 180 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 181, iters: 480, time: 0.291, data: 0.031) G_GAN: 4.636 G_L1: 19.863 D_real: 0.003 D_fake: 0.025 
+End of epoch 181 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 182, iters: 480, time: 0.273, data: 0.028) G_GAN: 4.007 G_L1: 17.898 D_real: 0.000 D_fake: 0.220 
+End of epoch 182 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 183, iters: 480, time: 0.272, data: 0.035) G_GAN: 5.078 G_L1: 17.039 D_real: 0.009 D_fake: 0.010 
+End of epoch 183 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 184, iters: 480, time: 0.278, data: 0.037) G_GAN: 3.254 G_L1: 20.336 D_real: 0.505 D_fake: 0.004 
+End of epoch 184 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 185, iters: 480, time: 0.291, data: 0.024) G_GAN: 4.320 G_L1: 20.014 D_real: 0.009 D_fake: 0.016 
+End of epoch 185 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 186, iters: 480, time: 0.278, data: 0.024) G_GAN: 5.420 G_L1: 18.727 D_real: 0.047 D_fake: 0.506 
+End of epoch 186 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 187, iters: 480, time: 0.285, data: 0.023) G_GAN: 4.934 G_L1: 18.569 D_real: 0.001 D_fake: 0.017 
+End of epoch 187 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 188, total_iters 90000)
+(epoch: 188, iters: 480, time: 0.283, data: 0.024) G_GAN: 6.231 G_L1: 21.648 D_real: 0.001 D_fake: 0.464 
+End of epoch 188 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0002000
+(epoch: 189, iters: 480, time: 0.289, data: 0.024) G_GAN: 5.439 G_L1: 21.942 D_real: 0.000 D_fake: 0.007 
+End of epoch 189 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 190, iters: 480, time: 0.277, data: 0.024) G_GAN: 5.309 G_L1: 18.910 D_real: 0.004 D_fake: 0.010 
+End of epoch 190 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 191, iters: 480, time: 0.277, data: 0.023) G_GAN: 6.043 G_L1: 21.790 D_real: 0.000 D_fake: 0.005 
+End of epoch 191 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 192, iters: 480, time: 0.300, data: 0.026) G_GAN: 4.757 G_L1: 21.346 D_real: 0.002 D_fake: 0.010 
+End of epoch 192 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 193, iters: 480, time: 0.277, data: 0.031) G_GAN: 6.094 G_L1: 25.432 D_real: 0.000 D_fake: 0.006 
+End of epoch 193 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 194, iters: 480, time: 0.282, data: 0.030) G_GAN: 7.941 G_L1: 24.747 D_real: 0.089 D_fake: 0.017 
+End of epoch 194 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 195, iters: 480, time: 0.284, data: 0.028) G_GAN: 6.522 G_L1: 18.220 D_real: 0.036 D_fake: 0.002 
+End of epoch 195 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 196, iters: 480, time: 0.297, data: 0.024) G_GAN: 4.828 G_L1: 18.865 D_real: 0.003 D_fake: 0.012 
+End of epoch 196 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 197, iters: 480, time: 0.286, data: 0.024) G_GAN: 7.854 G_L1: 24.765 D_real: 0.006 D_fake: 0.001 
+End of epoch 197 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+saving the latest model (epoch 198, total_iters 95000)
+(epoch: 198, iters: 480, time: 0.286, data: 0.024) G_GAN: 6.039 G_L1: 15.651 D_real: 0.013 D_fake: 0.003 
+End of epoch 198 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0002000
+(epoch: 199, iters: 480, time: 0.287, data: 0.024) G_GAN: 4.863 G_L1: 18.020 D_real: 0.064 D_fake: 0.015 
+End of epoch 199 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0002000
+(epoch: 200, iters: 480, time: 0.302, data: 0.024) G_GAN: 6.841 G_L1: 16.133 D_real: 0.203 D_fake: 0.000 
+End of epoch 200 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001998
+(epoch: 201, iters: 480, time: 0.283, data: 0.030) G_GAN: 5.015 G_L1: 18.850 D_real: 0.002 D_fake: 0.013 
+End of epoch 201 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001996
+(epoch: 202, iters: 480, time: 0.284, data: 0.024) G_GAN: 4.305 G_L1: 19.289 D_real: 0.003 D_fake: 0.448 
+End of epoch 202 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001994
+(epoch: 203, iters: 480, time: 0.285, data: 0.024) G_GAN: 2.667 G_L1: 15.719 D_real: 0.294 D_fake: 0.224 
+End of epoch 203 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001992
+(epoch: 204, iters: 480, time: 0.305, data: 0.024) G_GAN: 5.528 G_L1: 15.798 D_real: 0.036 D_fake: 0.006 
+End of epoch 204 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001990
+(epoch: 205, iters: 480, time: 0.288, data: 0.024) G_GAN: 4.546 G_L1: 20.145 D_real: 0.001 D_fake: 0.010 
+End of epoch 205 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001988
+(epoch: 206, iters: 480, time: 0.288, data: 0.024) G_GAN: 5.195 G_L1: 16.064 D_real: 0.370 D_fake: 0.005 
+End of epoch 206 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001986
+(epoch: 207, iters: 480, time: 0.305, data: 0.024) G_GAN: 7.214 G_L1: 16.539 D_real: 0.033 D_fake: 0.001 
+End of epoch 207 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001984
+(epoch: 208, iters: 480, time: 0.287, data: 0.024) G_GAN: 7.844 G_L1: 14.721 D_real: 0.149 D_fake: 0.001 
+End of epoch 208 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001982
+saving the latest model (epoch 209, total_iters 100000)
+(epoch: 209, iters: 480, time: 0.287, data: 0.024) G_GAN: 5.501 G_L1: 23.770 D_real: 0.040 D_fake: 0.003 
+End of epoch 209 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001980
+(epoch: 210, iters: 480, time: 0.291, data: 0.023) G_GAN: 5.847 G_L1: 19.122 D_real: 0.038 D_fake: 0.006 
+End of epoch 210 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001978
+(epoch: 211, iters: 480, time: 0.309, data: 0.025) G_GAN: 6.346 G_L1: 20.361 D_real: 0.001 D_fake: 0.004 
+End of epoch 211 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001976
+(epoch: 212, iters: 480, time: 0.297, data: 0.031) G_GAN: 0.829 G_L1: 15.892 D_real: 0.336 D_fake: 0.025 
+End of epoch 212 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001974
+(epoch: 213, iters: 480, time: 0.297, data: 0.024) G_GAN: 2.375 G_L1: 17.375 D_real: 0.333 D_fake: 0.010 
+End of epoch 213 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001972
+(epoch: 214, iters: 480, time: 0.308, data: 0.024) G_GAN: 5.775 G_L1: 17.652 D_real: 0.012 D_fake: 0.005 
+End of epoch 214 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001970
+(epoch: 215, iters: 480, time: 0.296, data: 0.026) G_GAN: 8.295 G_L1: 22.115 D_real: 0.065 D_fake: 0.000 
+End of epoch 215 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001968
+(epoch: 216, iters: 480, time: 0.294, data: 0.027) G_GAN: 6.324 G_L1: 15.366 D_real: 0.004 D_fake: 0.003 
+End of epoch 216 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001966
+(epoch: 217, iters: 480, time: 0.295, data: 0.030) G_GAN: 5.407 G_L1: 19.219 D_real: 0.001 D_fake: 0.008 
+End of epoch 217 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001964
+(epoch: 218, iters: 480, time: 0.306, data: 0.024) G_GAN: 7.224 G_L1: 20.293 D_real: 0.000 D_fake: 0.001 
+End of epoch 218 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001962
+saving the latest model (epoch 219, total_iters 105000)
+(epoch: 219, iters: 480, time: 0.293, data: 0.025) G_GAN: 5.777 G_L1: 25.660 D_real: 0.000 D_fake: 0.009 
+End of epoch 219 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001960
+(epoch: 220, iters: 480, time: 0.292, data: 0.024) G_GAN: 3.965 G_L1: 19.552 D_real: 0.260 D_fake: 0.005 
+End of epoch 220 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001958
+(epoch: 221, iters: 480, time: 0.304, data: 0.023) G_GAN: 3.063 G_L1: 16.574 D_real: 0.792 D_fake: 0.001 
+End of epoch 221 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001956
+(epoch: 222, iters: 480, time: 0.294, data: 0.029) G_GAN: 7.945 G_L1: 16.938 D_real: 0.008 D_fake: 0.001 
+End of epoch 222 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001954
+(epoch: 223, iters: 480, time: 0.294, data: 0.024) G_GAN: 5.568 G_L1: 18.710 D_real: 0.000 D_fake: 0.007 
+End of epoch 223 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001952
+(epoch: 224, iters: 480, time: 0.312, data: 0.023) G_GAN: 6.021 G_L1: 17.473 D_real: 0.029 D_fake: 0.002 
+End of epoch 224 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001950
+(epoch: 225, iters: 480, time: 0.299, data: 0.024) G_GAN: 7.937 G_L1: 19.299 D_real: 0.001 D_fake: 0.001 
+End of epoch 225 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001948
+(epoch: 226, iters: 480, time: 0.299, data: 0.024) G_GAN: 7.467 G_L1: 18.872 D_real: 0.008 D_fake: 0.001 
+End of epoch 226 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001946
+(epoch: 227, iters: 480, time: 0.312, data: 0.030) G_GAN: 8.086 G_L1: 20.696 D_real: 0.000 D_fake: 1.650 
+End of epoch 227 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001944
+(epoch: 228, iters: 480, time: 0.298, data: 0.023) G_GAN: 6.406 G_L1: 15.825 D_real: 0.004 D_fake: 0.003 
+End of epoch 228 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001942
+(epoch: 229, iters: 480, time: 0.295, data: 0.023) G_GAN: 5.261 G_L1: 19.911 D_real: 0.004 D_fake: 0.063 
+End of epoch 229 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001940
+saving the latest model (epoch 230, total_iters 110000)
+(epoch: 230, iters: 480, time: 0.296, data: 0.023) G_GAN: 7.209 G_L1: 23.238 D_real: 0.003 D_fake: 0.001 
+End of epoch 230 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001938
+(epoch: 231, iters: 480, time: 0.313, data: 0.029) G_GAN: 0.383 G_L1: 15.341 D_real: 1.346 D_fake: 0.094 
+End of epoch 231 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001936
+(epoch: 232, iters: 480, time: 0.304, data: 0.024) G_GAN: 5.530 G_L1: 18.847 D_real: 0.000 D_fake: 0.007 
+End of epoch 232 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001934
+(epoch: 233, iters: 480, time: 0.296, data: 0.024) G_GAN: 7.950 G_L1: 23.954 D_real: 0.000 D_fake: 0.001 
+End of epoch 233 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001932
+(epoch: 234, iters: 480, time: 0.315, data: 0.030) G_GAN: 6.009 G_L1: 19.746 D_real: 0.006 D_fake: 0.004 
+End of epoch 234 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001930
+(epoch: 235, iters: 480, time: 0.306, data: 0.030) G_GAN: 5.207 G_L1: 19.776 D_real: 0.001 D_fake: 0.118 
+End of epoch 235 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001928
+(epoch: 236, iters: 480, time: 0.305, data: 0.030) G_GAN: 4.962 G_L1: 21.700 D_real: 0.003 D_fake: 0.016 
+End of epoch 236 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001926
+(epoch: 237, iters: 480, time: 0.322, data: 0.030) G_GAN: 6.264 G_L1: 18.399 D_real: 0.002 D_fake: 0.003 
+End of epoch 237 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001924
+(epoch: 238, iters: 480, time: 0.304, data: 0.030) G_GAN: 7.161 G_L1: 18.234 D_real: 0.001 D_fake: 0.001 
+End of epoch 238 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001922
+(epoch: 239, iters: 480, time: 0.302, data: 0.024) G_GAN: 5.473 G_L1: 20.509 D_real: 0.223 D_fake: 0.009 
+End of epoch 239 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001920
+saving the latest model (epoch 240, total_iters 115000)
+(epoch: 240, iters: 480, time: 0.308, data: 0.028) G_GAN: 6.620 G_L1: 16.260 D_real: 0.010 D_fake: 0.002 
+End of epoch 240 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001918
+(epoch: 241, iters: 480, time: 0.303, data: 0.029) G_GAN: 7.079 G_L1: 24.298 D_real: 0.000 D_fake: 0.001 
+End of epoch 241 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001916
+(epoch: 242, iters: 480, time: 0.303, data: 0.024) G_GAN: 6.242 G_L1: 17.958 D_real: 0.011 D_fake: 0.002 
+End of epoch 242 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001914
+(epoch: 243, iters: 480, time: 0.319, data: 0.030) G_GAN: 5.358 G_L1: 28.547 D_real: 0.000 D_fake: 0.007 
+End of epoch 243 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001912
+(epoch: 244, iters: 480, time: 0.315, data: 0.024) G_GAN: 2.245 G_L1: 24.105 D_real: 0.011 D_fake: 0.055 
+End of epoch 244 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001910
+(epoch: 245, iters: 480, time: 0.323, data: 0.024) G_GAN: 4.487 G_L1: 16.882 D_real: 0.008 D_fake: 0.025 
+End of epoch 245 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001908
+(epoch: 246, iters: 480, time: 0.321, data: 0.023) G_GAN: 3.789 G_L1: 16.966 D_real: 0.214 D_fake: 0.007 
+End of epoch 246 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001906
+(epoch: 247, iters: 480, time: 0.311, data: 0.024) G_GAN: 0.554 G_L1: 16.602 D_real: 0.697 D_fake: 0.010 
+End of epoch 247 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001904
+(epoch: 248, iters: 480, time: 0.306, data: 0.023) G_GAN: 5.924 G_L1: 23.498 D_real: 0.000 D_fake: 0.005 
+End of epoch 248 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001902
+(epoch: 249, iters: 480, time: 0.329, data: 0.029) G_GAN: 3.455 G_L1: 18.357 D_real: 0.072 D_fake: 0.170 
+End of epoch 249 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001900
+(epoch: 250, iters: 480, time: 0.319, data: 0.024) G_GAN: 6.113 G_L1: 19.642 D_real: 0.001 D_fake: 0.006 
+saving the latest model (epoch 250, total_iters 120000)
+End of epoch 250 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001898
+(epoch: 251, iters: 480, time: 0.310, data: 0.031) G_GAN: 7.229 G_L1: 16.315 D_real: 0.008 D_fake: 0.001 
+End of epoch 251 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001896
+(epoch: 252, iters: 480, time: 0.331, data: 0.024) G_GAN: 5.377 G_L1: 20.706 D_real: 0.001 D_fake: 0.008 
+End of epoch 252 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001894
+(epoch: 253, iters: 480, time: 0.315, data: 0.024) G_GAN: 4.262 G_L1: 21.344 D_real: 0.000 D_fake: 0.057 
+End of epoch 253 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001892
+(epoch: 254, iters: 480, time: 0.312, data: 0.024) G_GAN: 7.814 G_L1: 21.341 D_real: 0.002 D_fake: 0.001 
+End of epoch 254 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001890
+(epoch: 255, iters: 480, time: 0.328, data: 0.023) G_GAN: 0.553 G_L1: 16.804 D_real: 2.588 D_fake: 0.002 
+End of epoch 255 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001888
+(epoch: 256, iters: 480, time: 0.315, data: 0.037) G_GAN: 4.084 G_L1: 20.635 D_real: 0.001 D_fake: 0.050 
+End of epoch 256 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001886
+(epoch: 257, iters: 480, time: 0.320, data: 0.040) G_GAN: 4.962 G_L1: 15.183 D_real: 0.129 D_fake: 0.003 
+End of epoch 257 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001884
+(epoch: 258, iters: 480, time: 0.338, data: 0.023) G_GAN: 5.954 G_L1: 21.483 D_real: 0.001 D_fake: 0.004 
+End of epoch 258 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001882
+(epoch: 259, iters: 480, time: 0.320, data: 0.024) G_GAN: 4.803 G_L1: 19.192 D_real: 0.000 D_fake: 0.026 
+End of epoch 259 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001880
+(epoch: 260, iters: 480, time: 0.320, data: 0.030) G_GAN: 5.733 G_L1: 16.722 D_real: 0.337 D_fake: 0.001 
+End of epoch 260 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001878
+saving the latest model (epoch 261, total_iters 125000)
+(epoch: 261, iters: 480, time: 0.335, data: 0.024) G_GAN: 6.228 G_L1: 21.106 D_real: 0.000 D_fake: 0.006 
+End of epoch 261 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001876
+(epoch: 262, iters: 480, time: 0.322, data: 0.024) G_GAN: 6.411 G_L1: 17.713 D_real: 0.002 D_fake: 0.004 
+End of epoch 262 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001874
+(epoch: 263, iters: 480, time: 0.328, data: 0.024) G_GAN: 5.925 G_L1: 18.637 D_real: 0.016 D_fake: 0.004 
+End of epoch 263 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001872
+(epoch: 264, iters: 480, time: 0.320, data: 0.031) G_GAN: 4.625 G_L1: 19.293 D_real: 0.002 D_fake: 0.014 
+End of epoch 264 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001870
+(epoch: 265, iters: 480, time: 0.319, data: 0.028) G_GAN: 3.946 G_L1: 16.796 D_real: 0.120 D_fake: 0.007 
+End of epoch 265 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001868
+(epoch: 266, iters: 480, time: 0.335, data: 0.024) G_GAN: 7.283 G_L1: 19.945 D_real: 0.000 D_fake: 0.001 
+End of epoch 266 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001866
+(epoch: 267, iters: 480, time: 0.319, data: 0.024) G_GAN: 3.846 G_L1: 18.503 D_real: 0.006 D_fake: 0.044 
+End of epoch 267 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001864
+(epoch: 268, iters: 480, time: 0.319, data: 0.024) G_GAN: 7.189 G_L1: 17.785 D_real: 0.003 D_fake: 0.001 
+End of epoch 268 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001862
+(epoch: 269, iters: 480, time: 0.340, data: 0.023) G_GAN: 3.949 G_L1: 23.041 D_real: 0.431 D_fake: 0.043 
+End of epoch 269 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001860
+(epoch: 270, iters: 480, time: 0.326, data: 0.024) G_GAN: 5.591 G_L1: 19.380 D_real: 0.003 D_fake: 0.007 
+End of epoch 270 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001858
+saving the latest model (epoch 271, total_iters 130000)
+(epoch: 271, iters: 480, time: 0.329, data: 0.030) G_GAN: 7.173 G_L1: 18.420 D_real: 0.000 D_fake: 0.001 
+End of epoch 271 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001856
+(epoch: 272, iters: 480, time: 0.342, data: 0.024) G_GAN: 5.986 G_L1: 18.900 D_real: 0.020 D_fake: 0.030 
+End of epoch 272 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001854
+(epoch: 273, iters: 480, time: 0.338, data: 0.024) G_GAN: 6.511 G_L1: 17.943 D_real: 0.001 D_fake: 0.003 
+End of epoch 273 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001852
+(epoch: 274, iters: 480, time: 0.347, data: 0.024) G_GAN: 4.346 G_L1: 22.439 D_real: 0.008 D_fake: 0.017 
+End of epoch 274 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001850
+(epoch: 275, iters: 480, time: 0.321, data: 0.026) G_GAN: 1.018 G_L1: 19.118 D_real: 2.459 D_fake: 0.003 
+End of epoch 275 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001848
+(epoch: 276, iters: 480, time: 0.326, data: 0.032) G_GAN: 4.754 G_L1: 21.612 D_real: 0.004 D_fake: 0.052 
+End of epoch 276 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001846
+(epoch: 277, iters: 480, time: 0.347, data: 0.024) G_GAN: 5.275 G_L1: 22.691 D_real: 0.001 D_fake: 0.008 
+End of epoch 277 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001844
+(epoch: 278, iters: 480, time: 0.321, data: 0.024) G_GAN: 5.323 G_L1: 16.355 D_real: 0.001 D_fake: 0.032 
+End of epoch 278 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001842
+(epoch: 279, iters: 480, time: 0.331, data: 0.030) G_GAN: 5.223 G_L1: 24.333 D_real: 0.000 D_fake: 0.011 
+End of epoch 279 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001840
+(epoch: 280, iters: 480, time: 0.346, data: 0.024) G_GAN: 7.321 G_L1: 22.054 D_real: 0.002 D_fake: 0.001 
+End of epoch 280 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001838
+(epoch: 281, iters: 480, time: 0.328, data: 0.024) G_GAN: 8.486 G_L1: 20.575 D_real: 0.000 D_fake: 0.000 
+End of epoch 281 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001836
+saving the latest model (epoch 282, total_iters 135000)
+(epoch: 282, iters: 480, time: 0.350, data: 0.029) G_GAN: 6.465 G_L1: 18.842 D_real: 0.000 D_fake: 0.003 
+End of epoch 282 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001834
+(epoch: 283, iters: 480, time: 0.329, data: 0.025) G_GAN: 8.892 G_L1: 16.153 D_real: 0.000 D_fake: 0.000 
+End of epoch 283 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001832
+(epoch: 284, iters: 480, time: 0.333, data: 0.024) G_GAN: 8.167 G_L1: 24.510 D_real: 0.000 D_fake: 0.001 
+End of epoch 284 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001830
+(epoch: 285, iters: 480, time: 0.355, data: 0.024) G_GAN: 0.892 G_L1: 17.280 D_real: 0.950 D_fake: 0.029 
+End of epoch 285 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001828
+(epoch: 286, iters: 480, time: 0.339, data: 0.024) G_GAN: 3.777 G_L1: 20.924 D_real: 0.006 D_fake: 0.361 
+End of epoch 286 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001826
+(epoch: 287, iters: 480, time: 0.332, data: 0.025) G_GAN: 5.379 G_L1: 17.344 D_real: 0.010 D_fake: 0.007 
+End of epoch 287 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001824
+(epoch: 288, iters: 480, time: 0.352, data: 0.030) G_GAN: 4.204 G_L1: 20.588 D_real: 0.007 D_fake: 0.033 
+End of epoch 288 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001822
+(epoch: 289, iters: 480, time: 0.327, data: 0.025) G_GAN: 4.281 G_L1: 17.550 D_real: 0.010 D_fake: 0.146 
+End of epoch 289 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001820
+(epoch: 290, iters: 480, time: 0.354, data: 0.024) G_GAN: 4.512 G_L1: 15.321 D_real: 0.045 D_fake: 0.664 
+End of epoch 290 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001818
+(epoch: 291, iters: 480, time: 0.341, data: 0.024) G_GAN: 3.926 G_L1: 18.438 D_real: 0.000 D_fake: 0.071 
+End of epoch 291 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001816
+saving the latest model (epoch 292, total_iters 140000)
+(epoch: 292, iters: 480, time: 0.345, data: 0.024) G_GAN: 7.804 G_L1: 21.531 D_real: 0.001 D_fake: 0.001 
+End of epoch 292 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001814
+(epoch: 293, iters: 480, time: 0.352, data: 0.024) G_GAN: 6.255 G_L1: 17.672 D_real: 0.001 D_fake: 0.003 
+End of epoch 293 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001812
+(epoch: 294, iters: 480, time: 0.342, data: 0.024) G_GAN: 5.562 G_L1: 26.565 D_real: 0.000 D_fake: 0.137 
+End of epoch 294 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001810
+(epoch: 295, iters: 480, time: 0.355, data: 0.024) G_GAN: 7.183 G_L1: 17.059 D_real: 0.000 D_fake: 0.001 
+End of epoch 295 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001808
+(epoch: 296, iters: 480, time: 0.336, data: 0.024) G_GAN: 8.772 G_L1: 17.183 D_real: 0.000 D_fake: 0.000 
+End of epoch 296 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001806
+(epoch: 297, iters: 480, time: 0.343, data: 0.030) G_GAN: 4.358 G_L1: 22.023 D_real: 0.003 D_fake: 0.015 
+End of epoch 297 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001804
+(epoch: 298, iters: 480, time: 0.352, data: 0.023) G_GAN: 7.909 G_L1: 24.372 D_real: 0.000 D_fake: 0.001 
+End of epoch 298 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001802
+(epoch: 299, iters: 480, time: 0.360, data: 0.023) G_GAN: 6.379 G_L1: 20.320 D_real: 0.000 D_fake: 0.003 
+End of epoch 299 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001800
+(epoch: 300, iters: 480, time: 0.352, data: 0.024) G_GAN: 4.571 G_L1: 20.415 D_real: 0.002 D_fake: 0.011 
+End of epoch 300 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001798
+(epoch: 301, iters: 480, time: 0.340, data: 0.023) G_GAN: 6.199 G_L1: 15.840 D_real: 0.004 D_fake: 0.004 
+End of epoch 301 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001796
+(epoch: 302, iters: 480, time: 0.351, data: 0.023) G_GAN: 4.740 G_L1: 18.953 D_real: 0.000 D_fake: 0.019 
+End of epoch 302 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001794
+saving the latest model (epoch 303, total_iters 145000)
+(epoch: 303, iters: 480, time: 0.363, data: 0.024) G_GAN: 4.784 G_L1: 21.463 D_real: 0.004 D_fake: 0.023 
+End of epoch 303 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001792
+(epoch: 304, iters: 480, time: 0.342, data: 0.024) G_GAN: 7.854 G_L1: 18.650 D_real: 0.079 D_fake: 0.000 
+End of epoch 304 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001790
+(epoch: 305, iters: 480, time: 0.354, data: 0.030) G_GAN: 7.828 G_L1: 21.314 D_real: 0.001 D_fake: 0.001 
+End of epoch 305 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001788
+(epoch: 306, iters: 480, time: 0.358, data: 0.027) G_GAN: 4.952 G_L1: 24.498 D_real: 0.004 D_fake: 0.028 
+End of epoch 306 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001786
+(epoch: 307, iters: 480, time: 0.363, data: 0.025) G_GAN: 5.283 G_L1: 19.588 D_real: 0.007 D_fake: 0.010 
+End of epoch 307 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001784
+(epoch: 308, iters: 480, time: 0.354, data: 0.024) G_GAN: 5.832 G_L1: 20.393 D_real: 0.002 D_fake: 0.009 
+End of epoch 308 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001782
+(epoch: 309, iters: 480, time: 0.346, data: 0.024) G_GAN: 5.579 G_L1: 18.196 D_real: 0.004 D_fake: 0.012 
+End of epoch 309 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001780
+(epoch: 310, iters: 480, time: 0.371, data: 0.027) G_GAN: 6.374 G_L1: 20.355 D_real: 0.003 D_fake: 0.366 
+End of epoch 310 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001778
+(epoch: 311, iters: 480, time: 0.349, data: 0.030) G_GAN: 6.623 G_L1: 18.760 D_real: 0.037 D_fake: 0.001 
+End of epoch 311 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001776
+(epoch: 312, iters: 480, time: 0.369, data: 0.024) G_GAN: 3.938 G_L1: 18.235 D_real: 0.003 D_fake: 0.148 
+End of epoch 312 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001774
+saving the latest model (epoch 313, total_iters 150000)
+(epoch: 313, iters: 480, time: 0.350, data: 0.024) G_GAN: 6.206 G_L1: 16.510 D_real: 0.003 D_fake: 0.004 
+End of epoch 313 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001772
+(epoch: 314, iters: 480, time: 0.354, data: 0.024) G_GAN: 4.643 G_L1: 14.461 D_real: 0.071 D_fake: 0.009 
+End of epoch 314 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001770
+(epoch: 315, iters: 480, time: 0.374, data: 0.030) G_GAN: 6.663 G_L1: 24.798 D_real: 0.001 D_fake: 0.003 
+End of epoch 315 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001768
+(epoch: 316, iters: 480, time: 0.344, data: 0.024) G_GAN: 5.654 G_L1: 22.431 D_real: 0.001 D_fake: 0.009 
+End of epoch 316 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001766
+(epoch: 317, iters: 480, time: 0.362, data: 0.030) G_GAN: 7.215 G_L1: 22.230 D_real: 0.004 D_fake: 0.002 
+End of epoch 317 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001764
+(epoch: 318, iters: 480, time: 0.355, data: 0.024) G_GAN: 7.578 G_L1: 22.169 D_real: 0.000 D_fake: 0.001 
+End of epoch 318 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001762
+(epoch: 319, iters: 480, time: 0.369, data: 0.024) G_GAN: 7.170 G_L1: 20.506 D_real: 0.000 D_fake: 0.002 
+End of epoch 319 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001760
+(epoch: 320, iters: 480, time: 0.356, data: 0.024) G_GAN: 7.433 G_L1: 20.806 D_real: 0.000 D_fake: 0.001 
+End of epoch 320 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001758
+(epoch: 321, iters: 480, time: 0.356, data: 0.027) G_GAN: 5.496 G_L1: 20.163 D_real: 0.382 D_fake: 0.042 
+End of epoch 321 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001756
+(epoch: 322, iters: 480, time: 0.373, data: 0.030) G_GAN: 6.773 G_L1: 18.048 D_real: 0.002 D_fake: 0.002 
+End of epoch 322 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001754
+saving the latest model (epoch 323, total_iters 155000)
+(epoch: 323, iters: 480, time: 0.353, data: 0.030) G_GAN: 7.906 G_L1: 21.168 D_real: 0.015 D_fake: 0.001 
+End of epoch 323 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001752
+(epoch: 324, iters: 480, time: 0.378, data: 0.030) G_GAN: 6.792 G_L1: 21.523 D_real: 0.014 D_fake: 0.002 
+End of epoch 324 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001750
+(epoch: 325, iters: 480, time: 0.357, data: 0.025) G_GAN: 6.930 G_L1: 24.195 D_real: 0.000 D_fake: 0.002 
+End of epoch 325 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001748
+(epoch: 326, iters: 480, time: 0.382, data: 0.024) G_GAN: 6.501 G_L1: 22.608 D_real: 0.014 D_fake: 0.003 
+End of epoch 326 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001746
+(epoch: 327, iters: 480, time: 0.361, data: 0.035) G_GAN: 8.470 G_L1: 21.354 D_real: 0.000 D_fake: 0.000 
+End of epoch 327 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001744
+(epoch: 328, iters: 480, time: 0.368, data: 0.024) G_GAN: 7.047 G_L1: 22.695 D_real: 0.000 D_fake: 0.002 
+End of epoch 328 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001742
+(epoch: 329, iters: 480, time: 0.356, data: 0.024) G_GAN: 9.833 G_L1: 19.476 D_real: 0.001 D_fake: 0.000 
+End of epoch 329 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001740
+(epoch: 330, iters: 480, time: 0.369, data: 0.024) G_GAN: 6.452 G_L1: 20.717 D_real: 0.000 D_fake: 0.003 
+End of epoch 330 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001738
+(epoch: 331, iters: 480, time: 0.404, data: 0.024) G_GAN: 2.143 G_L1: 18.701 D_real: 0.134 D_fake: 0.178 
+End of epoch 331 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001736
+(epoch: 332, iters: 480, time: 0.361, data: 0.024) G_GAN: 3.819 G_L1: 19.492 D_real: 0.013 D_fake: 0.024 
+End of epoch 332 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001734
+(epoch: 333, iters: 480, time: 0.375, data: 0.024) G_GAN: 7.276 G_L1: 18.438 D_real: 0.002 D_fake: 0.001 
+End of epoch 333 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001732
+saving the latest model (epoch 334, total_iters 160000)
+(epoch: 334, iters: 480, time: 0.364, data: 0.030) G_GAN: 5.209 G_L1: 18.452 D_real: 0.002 D_fake: 0.013 
+End of epoch 334 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001730
+(epoch: 335, iters: 480, time: 0.374, data: 0.024) G_GAN: 7.417 G_L1: 21.960 D_real: 0.017 D_fake: 0.001 
+End of epoch 335 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001728
+(epoch: 336, iters: 480, time: 0.358, data: 0.023) G_GAN: 6.671 G_L1: 19.570 D_real: 0.001 D_fake: 0.011 
+End of epoch 336 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001726
+(epoch: 337, iters: 480, time: 0.373, data: 0.024) G_GAN: 6.584 G_L1: 17.485 D_real: 0.000 D_fake: 0.003 
+End of epoch 337 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001724
+(epoch: 338, iters: 480, time: 0.365, data: 0.023) G_GAN: 4.535 G_L1: 16.331 D_real: 0.080 D_fake: 0.005 
+End of epoch 338 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001722
+(epoch: 339, iters: 480, time: 0.374, data: 0.030) G_GAN: 6.683 G_L1: 24.073 D_real: 0.000 D_fake: 0.002 
+End of epoch 339 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001720
+(epoch: 340, iters: 480, time: 0.365, data: 0.031) G_GAN: 6.545 G_L1: 22.481 D_real: 0.001 D_fake: 0.002 
+End of epoch 340 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001718
+(epoch: 341, iters: 480, time: 0.375, data: 0.026) G_GAN: 4.227 G_L1: 18.715 D_real: 0.013 D_fake: 0.045 
+End of epoch 341 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001716
+(epoch: 342, iters: 480, time: 0.382, data: 0.024) G_GAN: 4.577 G_L1: 20.307 D_real: 0.000 D_fake: 0.028 
+End of epoch 342 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001714
+(epoch: 343, iters: 480, time: 0.362, data: 0.030) G_GAN: 7.550 G_L1: 15.070 D_real: 0.013 D_fake: 0.001 
+End of epoch 343 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001712
+saving the latest model (epoch 344, total_iters 165000)
+(epoch: 344, iters: 480, time: 0.376, data: 0.024) G_GAN: 7.773 G_L1: 20.207 D_real: 0.001 D_fake: 0.001 
+End of epoch 344 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001710
+(epoch: 345, iters: 480, time: 0.370, data: 0.024) G_GAN: 6.920 G_L1: 21.891 D_real: 0.000 D_fake: 0.002 
+End of epoch 345 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001708
+(epoch: 346, iters: 480, time: 0.377, data: 0.024) G_GAN: 5.324 G_L1: 22.867 D_real: 0.000 D_fake: 0.006 
+End of epoch 346 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001706
+(epoch: 347, iters: 480, time: 0.373, data: 0.029) G_GAN: 8.783 G_L1: 21.738 D_real: 0.001 D_fake: 0.000 
+End of epoch 347 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001704
+(epoch: 348, iters: 480, time: 0.388, data: 0.030) G_GAN: 5.928 G_L1: 24.414 D_real: 0.000 D_fake: 0.006 
+End of epoch 348 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001702
+(epoch: 349, iters: 480, time: 0.373, data: 0.024) G_GAN: 4.485 G_L1: 20.015 D_real: 0.003 D_fake: 0.038 
+End of epoch 349 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001700
+(epoch: 350, iters: 480, time: 0.391, data: 0.024) G_GAN: 6.546 G_L1: 21.225 D_real: 0.306 D_fake: 0.000 
+End of epoch 350 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001698
+(epoch: 351, iters: 480, time: 0.370, data: 0.027) G_GAN: 6.416 G_L1: 21.334 D_real: 0.000 D_fake: 0.003 
+End of epoch 351 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001696
+(epoch: 352, iters: 480, time: 0.395, data: 0.023) G_GAN: 7.553 G_L1: 19.018 D_real: 0.002 D_fake: 0.001 
+End of epoch 352 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001694
+(epoch: 353, iters: 480, time: 0.373, data: 0.023) G_GAN: 7.912 G_L1: 20.245 D_real: 0.001 D_fake: 0.001 
+End of epoch 353 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001692
+(epoch: 354, iters: 480, time: 0.394, data: 0.024) G_GAN: 3.776 G_L1: 19.358 D_real: 0.000 D_fake: 0.048 
+End of epoch 354 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001690
+saving the latest model (epoch 355, total_iters 170000)
+(epoch: 355, iters: 480, time: 0.377, data: 0.024) G_GAN: 6.107 G_L1: 21.469 D_real: 0.001 D_fake: 0.004 
+End of epoch 355 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001688
+(epoch: 356, iters: 480, time: 0.372, data: 0.024) G_GAN: 4.462 G_L1: 20.410 D_real: 0.001 D_fake: 0.040 
+End of epoch 356 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001686
+(epoch: 357, iters: 480, time: 0.376, data: 0.024) G_GAN: 5.708 G_L1: 23.134 D_real: 0.006 D_fake: 0.005 
+End of epoch 357 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001684
+(epoch: 358, iters: 480, time: 0.371, data: 0.024) G_GAN: 6.533 G_L1: 20.599 D_real: 0.000 D_fake: 0.003 
+End of epoch 358 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001682
+(epoch: 359, iters: 480, time: 0.395, data: 0.024) G_GAN: 6.344 G_L1: 22.663 D_real: 0.000 D_fake: 0.003 
+End of epoch 359 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001680
+(epoch: 360, iters: 480, time: 0.383, data: 0.031) G_GAN: 5.840 G_L1: 21.312 D_real: 0.006 D_fake: 0.005 
+End of epoch 360 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001678
+(epoch: 361, iters: 480, time: 0.397, data: 0.027) G_GAN: 4.611 G_L1: 16.309 D_real: 0.116 D_fake: 0.004 
+End of epoch 361 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001676
+(epoch: 362, iters: 480, time: 0.383, data: 0.024) G_GAN: 6.777 G_L1: 20.466 D_real: 0.000 D_fake: 0.002 
+End of epoch 362 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001674
+(epoch: 363, iters: 480, time: 0.390, data: 0.024) G_GAN: 5.622 G_L1: 20.331 D_real: 0.005 D_fake: 0.009 
+End of epoch 363 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001672
+(epoch: 364, iters: 480, time: 0.381, data: 0.024) G_GAN: 6.102 G_L1: 19.104 D_real: 0.000 D_fake: 0.003 
+End of epoch 364 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001670
+saving the latest model (epoch 365, total_iters 175000)
+(epoch: 365, iters: 480, time: 0.387, data: 0.028) G_GAN: 5.784 G_L1: 20.197 D_real: 0.000 D_fake: 0.008 
+End of epoch 365 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001668
+(epoch: 366, iters: 480, time: 0.374, data: 0.024) G_GAN: 7.298 G_L1: 20.956 D_real: 0.000 D_fake: 0.001 
+End of epoch 366 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001666
+(epoch: 367, iters: 480, time: 0.400, data: 0.028) G_GAN: 8.479 G_L1: 17.321 D_real: 0.013 D_fake: 0.000 
+End of epoch 367 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001664
+(epoch: 368, iters: 480, time: 0.391, data: 0.024) G_GAN: 8.945 G_L1: 18.773 D_real: 0.001 D_fake: 0.000 
+End of epoch 368 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001662
+(epoch: 369, iters: 480, time: 0.400, data: 0.030) G_GAN: 8.638 G_L1: 20.092 D_real: 0.001 D_fake: 0.000 
+End of epoch 369 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001660
+(epoch: 370, iters: 480, time: 0.385, data: 0.024) G_GAN: 7.954 G_L1: 23.004 D_real: 0.000 D_fake: 0.001 
+End of epoch 370 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001658
+(epoch: 371, iters: 480, time: 0.402, data: 0.031) G_GAN: 1.646 G_L1: 21.753 D_real: 0.409 D_fake: 0.030 
+End of epoch 371 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001656
+(epoch: 372, iters: 480, time: 0.390, data: 0.024) G_GAN: 4.992 G_L1: 19.888 D_real: 0.000 D_fake: 0.014 
+End of epoch 372 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001654
+(epoch: 373, iters: 480, time: 0.406, data: 0.024) G_GAN: 4.317 G_L1: 21.460 D_real: 0.000 D_fake: 0.048 
+End of epoch 373 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001652
+(epoch: 374, iters: 480, time: 0.388, data: 0.023) G_GAN: 9.015 G_L1: 20.347 D_real: 0.001 D_fake: 0.000 
+End of epoch 374 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001650
+(epoch: 375, iters: 480, time: 0.410, data: 0.024) G_GAN: 5.678 G_L1: 22.878 D_real: 0.011 D_fake: 0.005 
+saving the latest model (epoch 375, total_iters 180000)
+End of epoch 375 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001648
+(epoch: 376, iters: 480, time: 0.390, data: 0.026) G_GAN: 3.925 G_L1: 17.609 D_real: 0.002 D_fake: 0.039 
+End of epoch 376 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001646
+(epoch: 377, iters: 480, time: 0.397, data: 0.024) G_GAN: 5.699 G_L1: 18.143 D_real: 0.002 D_fake: 0.007 
+End of epoch 377 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001644
+(epoch: 378, iters: 480, time: 0.392, data: 0.025) G_GAN: 7.427 G_L1: 22.876 D_real: 0.001 D_fake: 0.001 
+End of epoch 378 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001642
+(epoch: 379, iters: 480, time: 0.410, data: 0.032) G_GAN: 7.065 G_L1: 23.780 D_real: 0.000 D_fake: 0.002 
+End of epoch 379 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001640
+(epoch: 380, iters: 480, time: 0.398, data: 0.024) G_GAN: 6.646 G_L1: 22.265 D_real: 0.002 D_fake: 0.011 
+End of epoch 380 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001638
+(epoch: 381, iters: 480, time: 0.394, data: 0.024) G_GAN: 6.834 G_L1: 21.069 D_real: 0.010 D_fake: 0.002 
+End of epoch 381 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001636
+(epoch: 382, iters: 480, time: 0.393, data: 0.030) G_GAN: 4.641 G_L1: 20.069 D_real: 0.004 D_fake: 0.016 
+End of epoch 382 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001634
+(epoch: 383, iters: 480, time: 0.413, data: 0.029) G_GAN: 5.635 G_L1: 17.935 D_real: 0.006 D_fake: 0.006 
+End of epoch 383 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001632
+(epoch: 384, iters: 480, time: 0.397, data: 0.024) G_GAN: 8.657 G_L1: 17.408 D_real: 0.014 D_fake: 0.000 
+End of epoch 384 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001630
+(epoch: 385, iters: 480, time: 0.390, data: 0.030) G_GAN: 4.453 G_L1: 20.179 D_real: 0.000 D_fake: 0.080 
+End of epoch 385 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001628
+saving the latest model (epoch 386, total_iters 185000)
+(epoch: 386, iters: 480, time: 0.400, data: 0.024) G_GAN: 7.644 G_L1: 20.809 D_real: 0.000 D_fake: 0.001 
+End of epoch 386 / 1200 #011 Time Taken: 41 sec
+learning rate = 0.0001626
+(epoch: 387, iters: 480, time: 0.393, data: 0.024) G_GAN: 5.090 G_L1: 18.935 D_real: 0.000 D_fake: 0.031 
+End of epoch 387 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001624
+(epoch: 388, iters: 480, time: 0.404, data: 0.030) G_GAN: 8.529 G_L1: 17.387 D_real: 0.002 D_fake: 0.000 
+End of epoch 388 / 1200 #011 Time Taken: 40 sec
+learning rate = 0.0001622
+(epoch: 389, iters: 480, time: 0.397, data: 0.025) G_GAN: 8.607 G_L1: 19.342 D_real: 0.000 D_fake: 0.000 
